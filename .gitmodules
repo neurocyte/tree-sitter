@@ -49,3 +49,6 @@
 [submodule "tree-sitter-jsdoc"]
 	path = tree-sitter-jsdoc
 	url = https://github.com/tree-sitter/tree-sitter-jsdoc.git
+[submodule "tree-sitter-css"]
+	path = tree-sitter-css
+	url = https://github.com/tree-sitter/tree-sitter-css.git
