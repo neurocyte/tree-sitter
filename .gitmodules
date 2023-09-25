@@ -37,3 +37,6 @@
 [submodule "tree-sitter-agda"]
 	path = tree-sitter-agda
 	url = https://github.com/tree-sitter/tree-sitter-agda.git
+[submodule "tree-sitter-c-sharp"]
+	path = tree-sitter-c-sharp
+	url = https://github.com/tree-sitter/tree-sitter-c-sharp.git
