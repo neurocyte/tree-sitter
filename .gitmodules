@@ -19,3 +19,6 @@
 [submodule "tree-sitter-haskell"]
 	path = tree-sitter-haskell
 	url = https://github.com/tree-sitter/tree-sitter-haskell.git
+[submodule "tree-sitter-python"]
+	path = tree-sitter-python
+	url = https://github.com/tree-sitter/tree-sitter-python.git
