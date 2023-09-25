@@ -55,3 +55,6 @@
 [submodule "tree-sitter-c"]
 	path = tree-sitter-c
 	url = https://github.com/tree-sitter/tree-sitter-c.git
+[submodule "tree-sitter-verilog"]
+	path = tree-sitter-verilog
+	url = https://github.com/tree-sitter/tree-sitter-verilog.git
