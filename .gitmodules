@@ -28,3 +28,6 @@
 [submodule "tree-sitter-julia"]
 	path = tree-sitter-julia
 	url = https://github.com/tree-sitter/tree-sitter-julia.git
+[submodule "tree-sitter-bash"]
+	path = tree-sitter-bash
+	url = https://github.com/tree-sitter/tree-sitter-bash.git
