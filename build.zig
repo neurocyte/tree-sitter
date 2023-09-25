@@ -32,6 +32,8 @@ pub fn build(b: *std.build.Builder) void {
         "tree-sitter-jsdoc/src/parser.c",
         "tree-sitter-json/src/parser.c",
         "tree-sitter-julia/src/parser.c",
+        "tree-sitter-ocaml/interface/src/parser.c",
+        "tree-sitter-ocaml/ocaml/src/parser.c",
         "tree-sitter-php/src/parser.c",
         "tree-sitter-python/src/parser.c",
         "tree-sitter-regex/src/parser.c",
