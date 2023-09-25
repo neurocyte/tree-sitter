@@ -38,6 +38,7 @@ pub fn build(b: *std.build.Builder) void {
         "tree-sitter-php/src/parser.c",
         "tree-sitter-python/src/parser.c",
         "tree-sitter-regex/src/parser.c",
+        "tree-sitter-ruby/src/parser.c",
         "tree-sitter-rust/src/parser.c",
         "tree-sitter-scala/src/parser.c",
         "tree-sitter-tsq/src/parser.c",
