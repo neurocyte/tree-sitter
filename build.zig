@@ -19,6 +19,7 @@ pub fn build(b: *std.build.Builder) void {
     lib.addIncludePath(.{ .path = "tree-sitter/lib/src" });
     lib.addCSourceFiles(&.{
         "tree-sitter/lib/src/lib.c",
+        "tree-sitter-agda/src/parser.c",
         "tree-sitter-bash/src/parser.c",
         "tree-sitter-cpp/src/parser.c",
         "tree-sitter-haskell/src/parser.c",
