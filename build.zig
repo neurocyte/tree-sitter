@@ -10,9 +10,7 @@ pub fn build(b: *std.build.Builder) void {
         .optimize = optimize,
     });
 
-    const flags = [_][]const u8{
-        "-std=c99",
-    };
+    const flags = [_][]const u8{};
 
     lib.linkLibC();
     lib.addIncludePath(.{ .path = "tree-sitter/lib/include" });
