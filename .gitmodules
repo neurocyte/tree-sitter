@@ -52,3 +52,6 @@
 [submodule "tree-sitter-css"]
 	path = tree-sitter-css
 	url = https://github.com/tree-sitter/tree-sitter-css.git
+[submodule "tree-sitter-c"]
+	path = tree-sitter-c
+	url = https://github.com/tree-sitter/tree-sitter-c.git
