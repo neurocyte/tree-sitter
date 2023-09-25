@@ -70,3 +70,6 @@
 [submodule "tree-sitter-ocaml"]
 	path = tree-sitter-ocaml
 	url = https://github.com/tree-sitter/tree-sitter-ocaml.git
+[submodule "tree-sitter-html"]
+	path = tree-sitter-html
+	url = https://github.com/tree-sitter/tree-sitter-html.git
