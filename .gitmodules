@@ -25,3 +25,6 @@
 [submodule "tree-sitter-rust"]
 	path = tree-sitter-rust
 	url = https://github.com/tree-sitter/tree-sitter-rust.git
+[submodule "tree-sitter-julia"]
+	path = tree-sitter-julia
+	url = https://github.com/tree-sitter/tree-sitter-julia.git
