@@ -41,6 +41,7 @@ pub fn build(b: *std.build.Builder) void {
         "tree-sitter-ruby/src/parser.c",
         "tree-sitter-rust/src/parser.c",
         "tree-sitter-scala/src/parser.c",
+        "tree-sitter-toml/src/parser.c",
         "tree-sitter-tsq/src/parser.c",
         "tree-sitter-typescript/tsx/src/parser.c",
         "tree-sitter-typescript/typescript/src/parser.c",
