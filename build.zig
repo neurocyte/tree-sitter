@@ -20,6 +20,7 @@ pub fn build(b: *std.build.Builder) void {
     lib.addCSourceFiles(&.{
         "tree-sitter/lib/src/lib.c",
         "tree-sitter-cpp/src/parser.c",
+        "tree-sitter-haskell/src/parser.c",
         "tree-sitter-json/src/parser.c",
         "tree-sitter-scala/src/parser.c",
         "tree-sitter-typescript/tsx/src/parser.c",
