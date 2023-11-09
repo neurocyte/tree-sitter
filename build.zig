@@ -15,7 +15,7 @@ pub fn build(b: *std.build.Builder) void {
     lib.linkLibC();
     lib.addIncludePath(.{ .path = "tree-sitter/lib/include" });
     lib.addIncludePath(.{ .path = "tree-sitter/lib/src" });
-    lib.addCSourceFiles(&.{
+    lib.addCSourceFiles(.{ .files = &.{
         "tree-sitter/lib/src/lib.c",
         "tree-sitter-agda/src/parser.c",
         "tree-sitter-bash/src/parser.c",
@@ -45,7 +45,7 @@ pub fn build(b: *std.build.Builder) void {
         "tree-sitter-typescript/typescript/src/parser.c",
         "tree-sitter-verilog/src/parser.c",
         "tree-sitter-zig/src/parser.c",
-    }, &flags);
+    }, .flags = &flags });
 
     b.installArtifact(lib);
     lib.installHeadersDirectory("tree-sitter/lib/include/tree_sitter", "tree_sitter");
