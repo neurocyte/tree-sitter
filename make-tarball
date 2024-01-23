@@ -5,6 +5,8 @@ tar -cz \
     --exclude-vcs-ignores \
     --exclude=.github \
     --exclude=tree-sitter/test \
-    --exclude=tree-sitter-java \
+    --exclude=tree-sitter-java/bindings \
+    --exclude=tree-sitter-java/script \
+    --exclude=tree-sitter-java/test \
     -f tree-sitter.tar.gz \
     tree-sitter
