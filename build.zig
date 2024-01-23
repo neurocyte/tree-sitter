@@ -35,7 +35,7 @@ pub fn build(b: *std.Build) void {
             "tree-sitter-haskell/src/scanner.c",
             "tree-sitter-html/src/parser.c",
             "tree-sitter-html/src/scanner.c",
-            // "tree-sitter-java/src/parser.c",
+            "tree-sitter-java/src/parser.c",
             "tree-sitter-javascript/src/parser.c",
             "tree-sitter-javascript/src/scanner.c",
             "tree-sitter-jsdoc/src/parser.c",
@@ -71,4 +71,37 @@ pub fn build(b: *std.Build) void {
     });
     b.installArtifact(lib);
     lib.installHeadersDirectory("tree-sitter/lib/include/tree_sitter", "tree_sitter");
+
+    installQueries(b, "agda");
+    installQueries(b, "bash");
+    installQueries(b, "c-sharp");
+    installQueries(b, "c");
+    installQueries(b, "cpp");
+    installQueries(b, "css");
+    installQueries(b, "go");
+    installQueries(b, "haskell");
+    installQueries(b, "html");
+    installQueries(b, "java");
+    installQueries(b, "javascript");
+    installQueries(b, "jsdoc");
+    installQueries(b, "json");
+    installQueries(b, "ocaml");
+    installQueries(b, "php");
+    installQueries(b, "python");
+    installQueries(b, "regex");
+    installQueries(b, "ruby");
+    installQueries(b, "rust");
+    installQueries(b, "scala");
+    installQueries(b, "toml");
+    installQueries(b, "typescript");
+    installQueries(b, "zig");
+}
+
+fn installQueries(b: *std.Build, comptime lang: []const u8) void {
+    b.installDirectory(.{
+        .source_dir = .{ .path = "tree-sitter-" ++ lang ++ "/queries" },
+        .include_extensions = &[_][]const u8{".scm"},
+        .install_dir = .{ .custom = "queries" },
+        .install_subdir = lang,
+    });
 }
