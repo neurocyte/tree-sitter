@@ -30,6 +30,8 @@ pub fn build(b: *std.Build) void {
             "tree-sitter-cpp/src/scanner.c",
             "tree-sitter-css/src/parser.c",
             "tree-sitter-css/src/scanner.c",
+            "tree-sitter-gitcommit/src/parser.c",
+            "tree-sitter-gitcommit/src/scanner.c",
             "tree-sitter-go/src/parser.c",
             "tree-sitter-haskell/src/parser.c",
             "tree-sitter-haskell/src/scanner.c",
@@ -78,6 +80,7 @@ pub fn build(b: *std.Build) void {
     installQueries(b, "c");
     installQueries(b, "cpp");
     installQueries(b, "css");
+    installQueries(b, "gitcommit");
     installQueries(b, "go");
     installQueries(b, "haskell");
     installQueries(b, "html");
