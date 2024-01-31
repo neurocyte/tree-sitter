@@ -91,3 +91,6 @@
 [submodule "tree-sitter-ssh-config"]
 	path = tree-sitter-ssh-config
 	url = https://github.com/ObserverOfTime/tree-sitter-ssh-config.git
+[submodule "tree-sitter-scheme"]
+	path = tree-sitter-scheme
+	url = https://github.com/6cdh/tree-sitter-scheme.git
