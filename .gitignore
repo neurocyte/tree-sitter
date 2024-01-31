@@ -29,3 +29,5 @@ tree-sitter-scala/.prettierrc.json
 **/.vscode
 *.wasm
 *.yml
+/zig-out/
+/zig-cache/
