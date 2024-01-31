@@ -94,3 +94,6 @@
 [submodule "tree-sitter-scheme"]
 	path = tree-sitter-scheme
 	url = https://github.com/6cdh/tree-sitter-scheme.git
+[submodule "tree-sitter-purescript"]
+	path = tree-sitter-purescript
+	url = https://github.com/postsolar/tree-sitter-purescript.git

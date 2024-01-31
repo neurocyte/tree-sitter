@@ -52,6 +52,8 @@ pub fn build(b: *std.Build) void {
             "tree-sitter-ocaml/ocaml/src/scanner.c",
             "tree-sitter-php/php/src/parser.c",
             "tree-sitter-php/php/src/scanner.c",
+            "tree-sitter-purescript/src/parser.c",
+            "tree-sitter-purescript/src/scanner.c",
             "tree-sitter-python/src/parser.c",
             "tree-sitter-python/src/scanner.c",
             "tree-sitter-regex/src/parser.c",
@@ -96,6 +98,7 @@ pub fn build(b: *std.Build) void {
     installQueries(b, "json");
     installQueries(b, "ocaml");
     installQueries(b, "php");
+    installQueries(b, "purescript");
     installQueries(b, "python");
     installQueries(b, "regex");
     installQueries(b, "ruby");
