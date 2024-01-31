@@ -61,6 +61,7 @@ pub fn build(b: *std.Build) void {
             "tree-sitter-rust/src/scanner.c",
             "tree-sitter-scala/src/parser.c",
             "tree-sitter-scala/src/scanner.c",
+            "tree-sitter-ssh-config/src/parser.c",
             "tree-sitter-toml/src/parser.c",
             "tree-sitter-toml/src/scanner.c",
             "tree-sitter-tsq/src/parser.c",
@@ -99,6 +100,7 @@ pub fn build(b: *std.Build) void {
     installQueries(b, "ruby");
     installQueries(b, "rust");
     installQueries(b, "scala");
+    installQueries(b, "ssh-config");
     installQueries(b, "toml");
     installQueries(b, "typescript");
     installQueries(b, "zig");

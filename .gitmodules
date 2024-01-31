@@ -88,3 +88,6 @@
 [submodule "tree-sitter-git-rebase"]
 	path = tree-sitter-git-rebase
 	url = https://github.com/the-mikedavis/tree-sitter-git-rebase.git
+[submodule "tree-sitter-ssh-config"]
+	path = tree-sitter-ssh-config
+	url = https://github.com/ObserverOfTime/tree-sitter-ssh-config.git
