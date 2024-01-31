@@ -82,3 +82,6 @@
 [submodule "tree-sitter-gitcommit"]
 	path = tree-sitter-gitcommit
 	url = https://github.com/gbprod/tree-sitter-gitcommit.git
+[submodule "tree-sitter-diff"]
+	path = tree-sitter-diff
+	url = https://github.com/the-mikedavis/tree-sitter-diff.git
