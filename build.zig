@@ -46,6 +46,10 @@ pub fn build(b: *std.Build) void {
             "tree-sitter-json/src/parser.c",
             "tree-sitter-julia/src/parser.c",
             "tree-sitter-julia/src/scanner.c",
+            "tree-sitter-markdown/tree-sitter-markdown/src/parser.c",
+            "tree-sitter-markdown/tree-sitter-markdown/src/scanner.c",
+            "tree-sitter-markdown/tree-sitter-markdown-inline/src/parser.c",
+            "tree-sitter-markdown/tree-sitter-markdown-inline/src/scanner.c",
             "tree-sitter-ninja/src/parser.c",
             "tree-sitter-nix/src/parser.c",
             "tree-sitter-nix/src/scanner.c",
@@ -99,6 +103,8 @@ pub fn build(b: *std.Build) void {
     installQueries(b, "javascript");
     installQueries(b, "jsdoc");
     installQueries(b, "json");
+    installQueriesBase(b, "markdown", "tree-sitter-markdown/tree-sitter-markdown");
+    installQueriesBase(b, "markdown-inline", "tree-sitter-markdown/tree-sitter-markdown-inline");
     installQueries(b, "ninja");
     installQueries(b, "nix");
     installQueries(b, "ocaml");
@@ -117,8 +123,12 @@ pub fn build(b: *std.Build) void {
 }
 
 fn installQueries(b: *std.Build, comptime lang: []const u8) void {
+    installQueriesBase(b, lang, "tree-sitter-" ++ lang);
+}
+
+fn installQueriesBase(b: *std.Build, comptime lang: []const u8, comptime base: []const u8) void {
     b.installDirectory(.{
-        .source_dir = .{ .path = "tree-sitter-" ++ lang ++ "/queries" },
+        .source_dir = .{ .path = base ++ "/queries" },
         .include_extensions = &[_][]const u8{".scm"},
         .install_dir = .{ .custom = "queries" },
         .install_subdir = lang,

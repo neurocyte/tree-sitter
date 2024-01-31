@@ -103,3 +103,6 @@
 [submodule "tree-sitter-ninja"]
 	path = tree-sitter-ninja
 	url = https://github.com/alemuller/tree-sitter-ninja.git
+[submodule "tree-sitter-markdown"]
+	path = tree-sitter-markdown
+	url = https://github.com/MDeiml/tree-sitter-markdown.git
