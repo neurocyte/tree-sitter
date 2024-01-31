@@ -85,3 +85,6 @@
 [submodule "tree-sitter-diff"]
 	path = tree-sitter-diff
 	url = https://github.com/the-mikedavis/tree-sitter-diff.git
+[submodule "tree-sitter-git-rebase"]
+	path = tree-sitter-git-rebase
+	url = https://github.com/the-mikedavis/tree-sitter-git-rebase.git
