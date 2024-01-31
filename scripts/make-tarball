@@ -1,14 +1,17 @@
 #!/bin/sh
-cd $(dirname $0)/..
+touch source.tar.gz
+cd $(dirname $0)/../..
 tar -cvz \
     --exclude-vcs \
     --exclude-vcs-ignores \
+    --exclude=source.tar.gz \
     --exclude=.github \
     --exclude=docs \
     --exclude=bindings \
     --exclude=examples \
     --exclude=test \
     --exclude=script \
+    --exclude=scripts \
     --exclude=corpus \
     --exclude=tools \
     --exclude=assets \
@@ -16,8 +19,10 @@ tar -cvz \
     --exclude=zig-cache \
     --exclude=zig-out \
     --exclude=tree-sitter/test \
+    --exclude=tree-sitter/cli \
+    --exclude=tree-sitter/highlight \
     --exclude=tree-sitter-java/bindings \
     --exclude=tree-sitter-java/script \
     --exclude=tree-sitter-java/test \
-    -f tree-sitter.tar.gz \
+    -f tree-sitter/source.tar.gz \
     tree-sitter

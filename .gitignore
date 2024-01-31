@@ -18,6 +18,7 @@ Package.swift
 **/.prettierrc.json
 *.rs
 *.sh
+/source.tar.gz
 tree-sitter/highlight
 tree-sitter.patch
 tree-sitter-scala/.envrc
@@ -28,5 +29,5 @@ tree-sitter-scala/.prettierrc.json
 **/.vscode
 *.wasm
 *.yml
-/zig-out/
 /zig-cache/
+/zig-out/
