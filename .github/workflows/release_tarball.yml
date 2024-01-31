@@ -15,6 +15,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Fetch submodules
+        uses: snickerbockers/submodules-init@v4
+
       - name: Changelog
         uses: Bullrich/generate-release-changelog@master
         id: changelog
