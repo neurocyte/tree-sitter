@@ -1,9 +1,20 @@
 #!/bin/sh
 cd $(dirname $0)/..
-tar -cz \
+tar -cvz \
     --exclude-vcs \
     --exclude-vcs-ignores \
     --exclude=.github \
+    --exclude=docs \
+    --exclude=bindings \
+    --exclude=examples \
+    --exclude=test \
+    --exclude=script \
+    --exclude=corpus \
+    --exclude=tools \
+    --exclude=assets \
+    --exclude=tags \
+    --exclude=zig-cache/ \
+    --exclude=zig-out/ \
     --exclude=tree-sitter/test \
     --exclude=tree-sitter-java/bindings \
     --exclude=tree-sitter-java/script \
