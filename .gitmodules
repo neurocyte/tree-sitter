@@ -109,3 +109,6 @@
 [submodule "tree-sitter-nasm"]
 	path = tree-sitter-nasm
 	url = https://github.com/naclsn/tree-sitter-nasm.git
+[submodule "tree-sitter-make"]
+	path = tree-sitter-make
+	url = https://github.com/alemuller/tree-sitter-make.git

@@ -46,6 +46,7 @@ pub fn build(b: *std.Build) void {
             "tree-sitter-json/src/parser.c",
             "tree-sitter-julia/src/parser.c",
             "tree-sitter-julia/src/scanner.c",
+            "tree-sitter-make/src/parser.c",
             "tree-sitter-markdown/tree-sitter-markdown/src/parser.c",
             "tree-sitter-markdown/tree-sitter-markdown/src/scanner.c",
             "tree-sitter-markdown/tree-sitter-markdown-inline/src/parser.c",
@@ -104,6 +105,7 @@ pub fn build(b: *std.Build) void {
     installQueries(b, "javascript");
     installQueries(b, "jsdoc");
     installQueries(b, "json");
+    installQueries(b, "make");
     installQueriesBase(b, "markdown", "tree-sitter-markdown/tree-sitter-markdown");
     installQueriesBase(b, "markdown-inline", "tree-sitter-markdown/tree-sitter-markdown-inline");
     installQueries(b, "nasm");
