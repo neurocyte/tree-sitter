@@ -8,7 +8,6 @@ emscripten-version
 grammar.json
 *.html
 *.js
-LICENSE
 Makefile
 *.md
 node-types.json
