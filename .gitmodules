@@ -115,3 +115,6 @@
 [submodule "tree-sitter-lua"]
 	path = tree-sitter-lua
 	url = https://github.com/MunifTanjim/tree-sitter-lua.git
+[submodule "tree-sitter-fish"]
+	path = tree-sitter-fish
+	url = https://github.com/ram02z/tree-sitter-fish.git
