@@ -112,3 +112,6 @@
 [submodule "tree-sitter-make"]
 	path = tree-sitter-make
 	url = https://github.com/alemuller/tree-sitter-make.git
+[submodule "tree-sitter-lua"]
+	path = tree-sitter-lua
+	url = https://github.com/MunifTanjim/tree-sitter-lua.git
