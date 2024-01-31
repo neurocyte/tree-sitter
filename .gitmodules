@@ -118,3 +118,6 @@
 [submodule "tree-sitter-fish"]
 	path = tree-sitter-fish
 	url = https://github.com/ram02z/tree-sitter-fish.git
+[submodule "tree-sitter-dockerfile"]
+	path = tree-sitter-dockerfile
+	url = https://github.com/camdencheek/tree-sitter-dockerfile.git

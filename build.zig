@@ -31,6 +31,7 @@ pub fn build(b: *std.Build) void {
             "tree-sitter-css/src/parser.c",
             "tree-sitter-css/src/scanner.c",
             "tree-sitter-diff/src/parser.c",
+            "tree-sitter-dockerfile/src/parser.c",
             "tree-sitter-fish/src/parser.c",
             "tree-sitter-fish/src/scanner.c",
             "tree-sitter-gitcommit/src/parser.c",
@@ -100,6 +101,7 @@ pub fn build(b: *std.Build) void {
     installQueries(b, "cpp");
     installQueries(b, "css");
     installQueries(b, "diff");
+    installQueries(b, "dockerfile");
     installQueries(b, "fish");
     installQueries(b, "gitcommit");
     installQueries(b, "git-rebase");
