@@ -50,6 +50,7 @@ pub fn build(b: *std.Build) void {
             "tree-sitter-markdown/tree-sitter-markdown/src/scanner.c",
             "tree-sitter-markdown/tree-sitter-markdown-inline/src/parser.c",
             "tree-sitter-markdown/tree-sitter-markdown-inline/src/scanner.c",
+            "tree-sitter-nasm/src/parser.c",
             "tree-sitter-ninja/src/parser.c",
             "tree-sitter-nix/src/parser.c",
             "tree-sitter-nix/src/scanner.c",
@@ -105,6 +106,7 @@ pub fn build(b: *std.Build) void {
     installQueries(b, "json");
     installQueriesBase(b, "markdown", "tree-sitter-markdown/tree-sitter-markdown");
     installQueriesBase(b, "markdown-inline", "tree-sitter-markdown/tree-sitter-markdown-inline");
+    installQueries(b, "nasm");
     installQueries(b, "ninja");
     installQueries(b, "nix");
     installQueries(b, "ocaml");
