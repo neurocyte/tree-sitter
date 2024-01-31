@@ -13,8 +13,8 @@ tar -cvz \
     --exclude=tools \
     --exclude=assets \
     --exclude=tags \
-    --exclude=zig-cache/ \
-    --exclude=zig-out/ \
+    --exclude=zig-cache \
+    --exclude=zig-out \
     --exclude=tree-sitter/test \
     --exclude=tree-sitter-java/bindings \
     --exclude=tree-sitter-java/script \
