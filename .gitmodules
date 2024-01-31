@@ -100,3 +100,6 @@
 [submodule "tree-sitter-nix"]
 	path = tree-sitter-nix
 	url = https://github.com/nix-community/tree-sitter-nix.git
+[submodule "tree-sitter-ninja"]
+	path = tree-sitter-ninja
+	url = https://github.com/alemuller/tree-sitter-ninja.git

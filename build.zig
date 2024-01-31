@@ -46,6 +46,7 @@ pub fn build(b: *std.Build) void {
             "tree-sitter-json/src/parser.c",
             "tree-sitter-julia/src/parser.c",
             "tree-sitter-julia/src/scanner.c",
+            "tree-sitter-ninja/src/parser.c",
             "tree-sitter-nix/src/parser.c",
             "tree-sitter-nix/src/scanner.c",
             "tree-sitter-ocaml/interface/src/parser.c",
@@ -98,6 +99,7 @@ pub fn build(b: *std.Build) void {
     installQueries(b, "javascript");
     installQueries(b, "jsdoc");
     installQueries(b, "json");
+    installQueries(b, "ninja");
     installQueries(b, "nix");
     installQueries(b, "ocaml");
     installQueries(b, "php");
