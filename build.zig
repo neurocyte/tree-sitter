@@ -94,6 +94,11 @@ pub fn build(b: *std.Build) void {
     b.installArtifact(lib);
     lib.installHeadersDirectory("tree-sitter/lib/include/tree_sitter", "tree_sitter");
 
+    const mod = b.addModule("tree-sitter", .{
+        .root_source_file = .{ .path = "treez/treez.zig" },
+    });
+    mod.linkLibrary(lib);
+
     installQueries(b, "agda");
     installQueries(b, "bash");
     installQueries(b, "c-sharp");

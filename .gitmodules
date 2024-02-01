@@ -121,3 +121,6 @@
 [submodule "tree-sitter-dockerfile"]
 	path = tree-sitter-dockerfile
 	url = https://github.com/camdencheek/tree-sitter-dockerfile.git
+[submodule "treez"]
+	path = treez
+	url = https://github.com/ziglibs/treez.git
