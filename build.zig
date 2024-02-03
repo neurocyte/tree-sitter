@@ -64,6 +64,7 @@ pub fn build(b: *std.Build) void {
             "tree-sitter-ocaml/interface/src/scanner.c",
             "tree-sitter-ocaml/ocaml/src/parser.c",
             "tree-sitter-ocaml/ocaml/src/scanner.c",
+            "tree-sitter-openscad/src/parser.c",
             "tree-sitter-php/php/src/parser.c",
             "tree-sitter-php/php/src/scanner.c",
             "tree-sitter-purescript/src/parser.c",
@@ -125,6 +126,7 @@ pub fn build(b: *std.Build) void {
     installQueries(b, "ninja");
     installQueries(b, "nix");
     installQueries(b, "ocaml");
+    installQueries(b, "openscad");
     installQueries(b, "php");
     installQueries(b, "purescript");
     installQueries(b, "python");

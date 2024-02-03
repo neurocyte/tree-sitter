@@ -124,3 +124,6 @@
 [submodule "treez"]
 	path = treez
 	url = https://github.com/ziglibs/treez.git
+[submodule "tree-sitter-openscad"]
+	path = tree-sitter-openscad
+	url = https://github.com/bollian/tree-sitter-openscad.git
