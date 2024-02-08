@@ -16,6 +16,8 @@ pub fn build(b: *std.Build) void {
     lib.linkLibCpp();
     lib.addIncludePath(.{ .path = "tree-sitter/lib/include" });
     lib.addIncludePath(.{ .path = "tree-sitter/lib/src" });
+    lib.addCSourceFiles(.{ .files = &.{"tree-sitter/lib/src/lib.c"}, .flags = &flags });
+
     addParser(b, lib, "agda", null);
     addParser(b, lib, "bash", null);
     addParser(b, lib, "c-sharp", null);
@@ -72,15 +74,19 @@ pub fn build(b: *std.Build) void {
 fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const u8, comptime subdir: ?[]const u8) void {
     const basedir = "tree-sitter-" ++ lang;
     const srcdir = if (subdir) |sub| basedir ++ "/" ++ sub ++ "/src" else basedir ++ "/src";
-    const qrydir = if (subdir) |sub| if (exists(basedir ++ "/" ++ sub ++ "/queries")) basedir ++ "/" ++ sub ++ "/queries" else basedir ++ "/queries" else basedir ++ "/queries";
-    const parser = srcdir ++ "/parser.c";
-    const scanner = srcdir ++ "/scanner.c";
+    const qrypath = if (subdir) |sub| if (exists(basedir ++ "/" ++ sub ++ "/queries")) basedir ++ "/" ++ sub ++ "/queries" else basedir ++ "/queries" else basedir ++ "/queries";
+    const qrydir = b.pathFromRoot(qrypath);
+    const parser = b.pathFromRoot(srcdir ++ "/parser.c");
+    const scanner = b.pathFromRoot(srcdir ++ "/scanner.c");
+    const scanner_cc = b.pathFromRoot(srcdir ++ "/scanner.cc");
 
     if (exists(parser))
         lib.addCSourceFiles(.{ .files = &.{parser}, .flags = &flags });
+    if (exists(scanner_cc))
+        lib.addCSourceFiles(.{ .files = &.{scanner_cc}, .flags = &flags });
     if (exists(scanner))
         lib.addCSourceFiles(.{ .files = &.{scanner}, .flags = &flags });
-    lib.addIncludePath(.{ .path = srcdir });
+    lib.addIncludePath(.{ .path = b.pathFromRoot(srcdir) });
 
     if (exists(qrydir)) {
         b.installDirectory(.{
