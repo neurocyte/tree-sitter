@@ -1,5 +1,7 @@
 const std = @import("std");
 
+const flags = [_][]const u8{};
+
 pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
@@ -10,88 +12,54 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
     });
 
-    const flags = [_][]const u8{};
-
     lib.linkLibC();
     lib.linkLibCpp();
     lib.addIncludePath(.{ .path = "tree-sitter/lib/include" });
     lib.addIncludePath(.{ .path = "tree-sitter/lib/src" });
-    lib.addCSourceFiles(.{
-        .files = &.{
-            "tree-sitter/lib/src/lib.c",
-            "tree-sitter-agda/src/parser.c",
-            "tree-sitter-agda/src/scanner.c",
-            "tree-sitter-bash/src/parser.c",
-            "tree-sitter-bash/src/scanner.c",
-            "tree-sitter-c-sharp/src/parser.c",
-            "tree-sitter-c-sharp/src/scanner.c",
-            "tree-sitter-c/src/parser.c",
-            "tree-sitter-cpp/src/parser.c",
-            "tree-sitter-cpp/src/scanner.c",
-            "tree-sitter-css/src/parser.c",
-            "tree-sitter-css/src/scanner.c",
-            "tree-sitter-diff/src/parser.c",
-            "tree-sitter-dockerfile/src/parser.c",
-            "tree-sitter-fish/src/parser.c",
-            "tree-sitter-fish/src/scanner.c",
-            "tree-sitter-gitcommit/src/parser.c",
-            "tree-sitter-gitcommit/src/scanner.c",
-            "tree-sitter-git-rebase/src/parser.c",
-            "tree-sitter-go/src/parser.c",
-            "tree-sitter-haskell/src/parser.c",
-            "tree-sitter-haskell/src/scanner.c",
-            "tree-sitter-html/src/parser.c",
-            "tree-sitter-html/src/scanner.c",
-            "tree-sitter-java/src/parser.c",
-            "tree-sitter-javascript/src/parser.c",
-            "tree-sitter-javascript/src/scanner.c",
-            "tree-sitter-jsdoc/src/parser.c",
-            "tree-sitter-json/src/parser.c",
-            "tree-sitter-julia/src/parser.c",
-            "tree-sitter-julia/src/scanner.c",
-            "tree-sitter-lua/src/parser.c",
-            "tree-sitter-lua/src/scanner.c",
-            "tree-sitter-make/src/parser.c",
-            "tree-sitter-markdown/tree-sitter-markdown/src/parser.c",
-            "tree-sitter-markdown/tree-sitter-markdown/src/scanner.c",
-            "tree-sitter-markdown/tree-sitter-markdown-inline/src/parser.c",
-            "tree-sitter-markdown/tree-sitter-markdown-inline/src/scanner.c",
-            "tree-sitter-nasm/src/parser.c",
-            "tree-sitter-ninja/src/parser.c",
-            "tree-sitter-nix/src/parser.c",
-            "tree-sitter-nix/src/scanner.c",
-            "tree-sitter-ocaml/interface/src/parser.c",
-            "tree-sitter-ocaml/interface/src/scanner.c",
-            "tree-sitter-ocaml/ocaml/src/parser.c",
-            "tree-sitter-ocaml/ocaml/src/scanner.c",
-            "tree-sitter-openscad/src/parser.c",
-            "tree-sitter-php/php/src/parser.c",
-            "tree-sitter-php/php/src/scanner.c",
-            "tree-sitter-purescript/src/parser.c",
-            "tree-sitter-purescript/src/scanner.c",
-            "tree-sitter-python/src/parser.c",
-            "tree-sitter-python/src/scanner.c",
-            "tree-sitter-regex/src/parser.c",
-            "tree-sitter-ruby/src/parser.c",
-            "tree-sitter-ruby/src/scanner.cc",
-            "tree-sitter-rust/src/parser.c",
-            "tree-sitter-rust/src/scanner.c",
-            "tree-sitter-scala/src/parser.c",
-            "tree-sitter-scala/src/scanner.c",
-            "tree-sitter-scheme/src/parser.c",
-            "tree-sitter-ssh-config/src/parser.c",
-            "tree-sitter-toml/src/parser.c",
-            "tree-sitter-toml/src/scanner.c",
-            "tree-sitter-tsq/src/parser.c",
-            "tree-sitter-typescript/tsx/src/parser.c",
-            "tree-sitter-typescript/tsx/src/scanner.c",
-            "tree-sitter-typescript/typescript/src/parser.c",
-            "tree-sitter-typescript/typescript/src/scanner.c",
-            "tree-sitter-verilog/src/parser.c",
-            "tree-sitter-zig/src/parser.c",
-        },
-        .flags = &flags,
-    });
+    addParser(b, lib, "agda", null);
+    addParser(b, lib, "bash", null);
+    addParser(b, lib, "c-sharp", null);
+    addParser(b, lib, "c", null);
+    addParser(b, lib, "cpp", null);
+    addParser(b, lib, "css", null);
+    addParser(b, lib, "diff", null);
+    addParser(b, lib, "dockerfile", null);
+    addParser(b, lib, "fish", null);
+    addParser(b, lib, "gitcommit", null);
+    addParser(b, lib, "git-rebase", null);
+    addParser(b, lib, "go", null);
+    addParser(b, lib, "haskell", null);
+    addParser(b, lib, "html", null);
+    addParser(b, lib, "java", null);
+    addParser(b, lib, "javascript", null);
+    addParser(b, lib, "jsdoc", null);
+    addParser(b, lib, "json", null);
+    addParser(b, lib, "julia", null);
+    addParser(b, lib, "lua", null);
+    addParser(b, lib, "make", null);
+    addParser(b, lib, "markdown", "tree-sitter-markdown");
+    addParser(b, lib, "markdown", "tree-sitter-markdown-inline");
+    addParser(b, lib, "nasm", null);
+    addParser(b, lib, "ninja", null);
+    addParser(b, lib, "nix", null);
+    addParser(b, lib, "ocaml", "interface");
+    addParser(b, lib, "ocaml", "ocaml");
+    addParser(b, lib, "openscad", null);
+    addParser(b, lib, "php", "php");
+    addParser(b, lib, "purescript", null);
+    addParser(b, lib, "python", null);
+    addParser(b, lib, "regex", null);
+    addParser(b, lib, "ruby", null);
+    addParser(b, lib, "rust", null);
+    addParser(b, lib, "scala", null);
+    addParser(b, lib, "scheme", null);
+    addParser(b, lib, "ssh-config", null);
+    addParser(b, lib, "toml", null);
+    addParser(b, lib, "tsq", null);
+    addParser(b, lib, "typescript", "tsx");
+    addParser(b, lib, "typescript", "typescript");
+    addParser(b, lib, "verilog", null);
+    addParser(b, lib, "zig", null);
     b.installArtifact(lib);
     lib.installHeadersDirectory("tree-sitter/lib/include/tree_sitter", "tree_sitter");
 
@@ -99,57 +67,32 @@ pub fn build(b: *std.Build) void {
         .root_source_file = .{ .path = "treez/treez.zig" },
     });
     mod.linkLibrary(lib);
-
-    installQueries(b, "agda");
-    installQueries(b, "bash");
-    installQueries(b, "c-sharp");
-    installQueries(b, "c");
-    installQueries(b, "cpp");
-    installQueries(b, "css");
-    installQueries(b, "diff");
-    installQueries(b, "dockerfile");
-    installQueries(b, "fish");
-    installQueries(b, "gitcommit");
-    installQueries(b, "git-rebase");
-    installQueries(b, "go");
-    installQueries(b, "haskell");
-    installQueries(b, "html");
-    installQueries(b, "java");
-    installQueries(b, "javascript");
-    installQueries(b, "jsdoc");
-    installQueries(b, "json");
-    installQueries(b, "lua");
-    installQueries(b, "make");
-    installQueriesBase(b, "markdown", "tree-sitter-markdown/tree-sitter-markdown");
-    installQueriesBase(b, "markdown-inline", "tree-sitter-markdown/tree-sitter-markdown-inline");
-    installQueries(b, "nasm");
-    installQueries(b, "ninja");
-    installQueries(b, "nix");
-    installQueries(b, "ocaml");
-    installQueries(b, "openscad");
-    installQueries(b, "php");
-    installQueries(b, "purescript");
-    installQueries(b, "python");
-    installQueries(b, "regex");
-    installQueries(b, "ruby");
-    installQueries(b, "rust");
-    installQueries(b, "scala");
-    installQueries(b, "scheme");
-    installQueries(b, "ssh-config");
-    installQueries(b, "toml");
-    installQueries(b, "typescript");
-    installQueries(b, "zig");
 }
 
-fn installQueries(b: *std.Build, comptime lang: []const u8) void {
-    installQueriesBase(b, lang, "tree-sitter-" ++ lang);
+fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const u8, comptime subdir: ?[]const u8) void {
+    const basedir = "tree-sitter-" ++ lang;
+    const srcdir = if (subdir) |sub| basedir ++ "/" ++ sub ++ "/src" else basedir ++ "/src";
+    const qrydir = if (subdir) |sub| if (exists(basedir ++ "/" ++ sub ++ "/queries")) basedir ++ "/" ++ sub ++ "/queries" else basedir ++ "/queries" else basedir ++ "/queries";
+    const parser = srcdir ++ "/parser.c";
+    const scanner = srcdir ++ "/scanner.c";
+
+    if (exists(parser))
+        lib.addCSourceFiles(.{ .files = &.{parser}, .flags = &flags });
+    if (exists(scanner))
+        lib.addCSourceFiles(.{ .files = &.{scanner}, .flags = &flags });
+    lib.addIncludePath(.{ .path = srcdir });
+
+    if (exists(qrydir)) {
+        b.installDirectory(.{
+            .source_dir = .{ .path = qrydir },
+            .include_extensions = &[_][]const u8{".scm"},
+            .install_dir = .{ .custom = "queries" },
+            .install_subdir = lang,
+        });
+    }
 }
 
-fn installQueriesBase(b: *std.Build, comptime lang: []const u8, comptime base: []const u8) void {
-    b.installDirectory(.{
-        .source_dir = .{ .path = base ++ "/queries" },
-        .include_extensions = &[_][]const u8{".scm"},
-        .install_dir = .{ .custom = "queries" },
-        .install_subdir = lang,
-    });
+fn exists(path: []const u8) bool {
+    std.fs.cwd().access(path, .{ .mode = .read_only }) catch return false;
+    return true;
 }
