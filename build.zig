@@ -47,6 +47,7 @@ pub fn build(b: *std.Build) void {
     addParser(b, lib, "ocaml", "interface");
     addParser(b, lib, "ocaml", "ocaml");
     addParser(b, lib, "openscad", null);
+    addParser(b, lib, "org", null);
     addParser(b, lib, "php", "php");
     addParser(b, lib, "purescript", null);
     addParser(b, lib, "python", null);

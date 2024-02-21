@@ -130,3 +130,6 @@
 [submodule "tree-sitter-xml"]
 	path = tree-sitter-xml
 	url = https://github.com/tree-sitter-grammars/tree-sitter-xml.git
+[submodule "tree-sitter-org"]
+	path = tree-sitter-org
+	url = https://github.com/milisims/tree-sitter-org.git
