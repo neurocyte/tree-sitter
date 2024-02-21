@@ -127,3 +127,6 @@
 [submodule "tree-sitter-openscad"]
 	path = tree-sitter-openscad
 	url = https://github.com/bollian/tree-sitter-openscad.git
+[submodule "tree-sitter-xml"]
+	path = tree-sitter-xml
+	url = https://github.com/tree-sitter-grammars/tree-sitter-xml.git
