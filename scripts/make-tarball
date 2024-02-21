@@ -24,5 +24,7 @@ tar -cvz \
     --exclude=tree-sitter-java/bindings \
     --exclude=tree-sitter-java/script \
     --exclude=tree-sitter-java/test \
+    --exclude=treez/build.zig \
+    --exclude=treez/build.zig.zon \
     -f tree-sitter/source.tar.gz \
     tree-sitter
