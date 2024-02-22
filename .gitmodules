@@ -133,3 +133,6 @@
 [submodule "tree-sitter-org"]
 	path = tree-sitter-org
 	url = https://github.com/milisims/tree-sitter-org.git
+[submodule "tree-sitter-ziggy"]
+	path = tree-sitter-ziggy
+	url = https://github.com/kristoff-it/ziggy.git

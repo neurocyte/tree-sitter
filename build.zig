@@ -65,6 +65,7 @@ pub fn build(b: *std.Build) void {
     addParser(b, lib, "xml", "dtd");
     addParser(b, lib, "xml", "xml");
     addParser(b, lib, "zig", null);
+    addParser(b, lib, "ziggy", "tree-sitter-ziggy");
     b.installArtifact(lib);
     lib.installHeadersDirectory("tree-sitter/lib/include/tree_sitter", "tree_sitter");
 
