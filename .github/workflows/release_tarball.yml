@@ -34,7 +34,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref_name }}-${{ github.sha }}
-          release_name: Tarball release of ${{ github.sha }}
+          release_name: Nightly
           body: |
             ${{ steps.changelog.outputs.changelog }}
           draft: false
