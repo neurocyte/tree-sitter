@@ -1,6 +1,9 @@
 const std = @import("std");
 
-const flags = [_][]const u8{};
+const flags = [_][]const u8{
+    "-fno-sanitize=undefined",
+};
+
 
 pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
