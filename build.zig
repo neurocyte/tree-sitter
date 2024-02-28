@@ -4,7 +4,6 @@ const flags = [_][]const u8{
     "-fno-sanitize=undefined",
 };
 
-
 pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
@@ -81,21 +80,19 @@ pub fn build(b: *std.Build) void {
 fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const u8, comptime subdir: ?[]const u8) void {
     const basedir = "tree-sitter-" ++ lang;
     const srcdir = if (subdir) |sub| basedir ++ "/" ++ sub ++ "/src" else basedir ++ "/src";
-    const qrypath = if (subdir) |sub| if (exists(basedir ++ "/" ++ sub ++ "/queries")) basedir ++ "/" ++ sub ++ "/queries" else basedir ++ "/queries" else basedir ++ "/queries";
-    const qrydir = b.pathFromRoot(qrypath);
-    const parser = b.pathFromRoot(srcdir ++ "/parser.c");
-    const scanner = b.pathFromRoot(srcdir ++ "/scanner.c");
-    const scanner_cc = b.pathFromRoot(srcdir ++ "/scanner.cc");
+    const qrydir = if (subdir) |sub| if (exists(b, basedir ++ "/" ++ sub ++ "/queries")) basedir ++ "/" ++ sub ++ "/queries" else basedir ++ "/queries" else basedir ++ "/queries";
+    const parser = srcdir ++ "/parser.c";
+    const scanner = srcdir ++ "/scanner.c";
+    const scanner_cc = srcdir ++ "/scanner.cc";
 
-    if (exists(parser))
-        lib.addCSourceFiles(.{ .files = &.{parser}, .flags = &flags });
-    if (exists(scanner_cc))
+    lib.addCSourceFiles(.{ .files = &.{parser}, .flags = &flags });
+    if (exists(b, scanner_cc))
         lib.addCSourceFiles(.{ .files = &.{scanner_cc}, .flags = &flags });
-    if (exists(scanner))
+    if (exists(b, scanner))
         lib.addCSourceFiles(.{ .files = &.{scanner}, .flags = &flags });
-    lib.addIncludePath(.{ .path = b.pathFromRoot(srcdir) });
+    lib.addIncludePath(.{ .path = srcdir });
 
-    if (exists(qrydir)) {
+    if (exists(b, qrydir)) {
         b.installDirectory(.{
             .source_dir = .{ .path = qrydir },
             .include_extensions = &[_][]const u8{".scm"},
@@ -105,7 +102,7 @@ fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const
     }
 }
 
-fn exists(path: []const u8) bool {
-    std.fs.cwd().access(path, .{ .mode = .read_only }) catch return false;
+fn exists(b: *std.Build, path: []const u8) bool {
+    std.fs.cwd().access(b.pathFromRoot(path), .{ .mode = .read_only }) catch return false;
     return true;
 }
