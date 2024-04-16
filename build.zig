@@ -70,7 +70,7 @@ pub fn build(b: *std.Build) void {
     addParser(b, lib, "ziggy", "tree-sitter-ziggy");
     addParser(b, lib, "ziggy", "tree-sitter-ziggy-schema");
     b.installArtifact(lib);
-    lib.installHeadersDirectory("tree-sitter/lib/include/tree_sitter", "tree_sitter");
+    lib.installHeadersDirectory(.{ .path = "tree-sitter/lib/include/tree_sitter" }, "tree_sitter", .{});
 
     const mod = b.addModule("treez", .{
         .root_source_file = .{ .path = "treez/treez.zig" },
