@@ -16,8 +16,8 @@ pub fn build(b: *std.Build) void {
 
     lib.linkLibC();
     lib.linkLibCpp();
-    lib.addIncludePath(.{ .path = "tree-sitter/lib/include" });
-    lib.addIncludePath(.{ .path = "tree-sitter/lib/src" });
+    lib.addIncludePath(b.path("tree-sitter/lib/include"));
+    lib.addIncludePath(b.path("tree-sitter/lib/src"));
     lib.addCSourceFiles(.{ .files = &.{"tree-sitter/lib/src/lib.c"}, .flags = &flags });
 
     addParser(b, lib, "agda", null);
@@ -70,10 +70,10 @@ pub fn build(b: *std.Build) void {
     addParser(b, lib, "ziggy", "tree-sitter-ziggy");
     addParser(b, lib, "ziggy", "tree-sitter-ziggy-schema");
     b.installArtifact(lib);
-    lib.installHeadersDirectory(.{ .path = "tree-sitter/lib/include/tree_sitter" }, "tree_sitter", .{});
+    lib.installHeadersDirectory(b.path("tree-sitter/lib/include/tree_sitter"), "tree_sitter", .{});
 
     const mod = b.addModule("treez", .{
-        .root_source_file = .{ .path = "treez/treez.zig" },
+        .root_source_file = b.path("treez/treez.zig"),
     });
     mod.linkLibrary(lib);
 }
@@ -91,11 +91,11 @@ fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const
         lib.addCSourceFiles(.{ .files = &.{scanner_cc}, .flags = &flags });
     if (exists(b, scanner))
         lib.addCSourceFiles(.{ .files = &.{scanner}, .flags = &flags });
-    lib.addIncludePath(.{ .path = srcdir });
+    lib.addIncludePath(b.path(srcdir));
 
     if (exists(b, qrydir)) {
         b.installDirectory(.{
-            .source_dir = .{ .path = qrydir },
+            .source_dir = b.path(qrydir),
             .include_extensions = &[_][]const u8{".scm"},
             .install_dir = .{ .custom = "queries" },
             .install_subdir = lang,
