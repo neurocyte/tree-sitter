@@ -133,7 +133,3 @@
 [submodule "tree-sitter-org"]
 	path = tree-sitter-org
 	url = https://github.com/milisims/tree-sitter-org.git
-[submodule "tree-sitter-ziggy"]
-	# TODO switch back to kristoff-it when https://github.com/kristoff-it/ziggy/pull/29 is merged
-	path = tree-sitter-ziggy
-	url = https://github.com/MFAshby/ziggy
