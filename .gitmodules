@@ -139,3 +139,6 @@
 [submodule "tree-sitter-nim"]
 	path = tree-sitter-nim
 	url = https://github.com/alaviss/tree-sitter-nim.git
+[submodule "tree-sitter-kdl"]
+	path = tree-sitter-kdl
+	url = https://github.com/tree-sitter-grammars/tree-sitter-kdl.git
