@@ -44,10 +44,12 @@ pub fn build(b: *std.Build) void {
     addParser(b, lib, "markdown", "tree-sitter-markdown");
     addParser(b, lib, "markdown", "tree-sitter-markdown-inline");
     addParser(b, lib, "nasm", null);
+    addParser(b, lib, "nim", null);
     addParser(b, lib, "ninja", null);
     addParser(b, lib, "nix", null);
-    addParser(b, lib, "ocaml", "interface");
-    addParser(b, lib, "ocaml", "ocaml");
+    addParser(b, lib, "ocaml", "grammars/interface");
+    addParser(b, lib, "ocaml", "grammars/ocaml");
+    addParser(b, lib, "ocaml", "grammars/type");
     addParser(b, lib, "openscad", null);
     addParser(b, lib, "org", null);
     addParser(b, lib, "php", "php");
