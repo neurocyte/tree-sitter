@@ -142,3 +142,6 @@
 [submodule "tree-sitter-kdl"]
 	path = tree-sitter-kdl
 	url = https://github.com/tree-sitter-grammars/tree-sitter-kdl.git
+[submodule "tree-sitter-yaml"]
+	path = tree-sitter-yaml
+	url = https://github.com/tree-sitter-grammars/tree-sitter-yaml.git

@@ -69,6 +69,7 @@ pub fn build(b: *std.Build) void {
     addParser(b, lib, "verilog", null);
     addParser(b, lib, "xml", "dtd");
     addParser(b, lib, "xml", "xml");
+    addParser(b, lib, "yaml", null);
     addParser(b, lib, "zig", null);
     addParser(b, lib, "ziggy", "tree-sitter-ziggy");
     addParser(b, lib, "ziggy", "tree-sitter-ziggy-schema");
