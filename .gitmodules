@@ -145,3 +145,6 @@
 [submodule "tree-sitter-yaml"]
 	path = tree-sitter-yaml
 	url = https://github.com/tree-sitter-grammars/tree-sitter-yaml.git
+[submodule "superhtml"]
+	path = superhtml
+	url = https://github.com/kristoff-it/superhtml
