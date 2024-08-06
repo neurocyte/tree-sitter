@@ -148,3 +148,6 @@
 [submodule "tree-sitter-superhtml"]
 	path = tree-sitter-superhtml
 	url = https://github.com/kristoff-it/superhtml
+[submodule "tree-sitter-elixir"]
+	path = tree-sitter-elixir
+	url = https://github.com/elixir-lang/tree-sitter-elixir
