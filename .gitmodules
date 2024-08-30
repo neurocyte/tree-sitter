@@ -151,3 +151,6 @@
 [submodule "tree-sitter-elixir"]
 	path = tree-sitter-elixir
 	url = https://github.com/elixir-lang/tree-sitter-elixir
+[submodule "tree-sitter-typst"]
+	path = tree-sitter-typst
+	url = https://github.com/uben0/tree-sitter-typst
