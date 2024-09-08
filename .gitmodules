@@ -154,3 +154,6 @@
 [submodule "tree-sitter-typst"]
 	path = tree-sitter-typst
 	url = https://github.com/uben0/tree-sitter-typst
+[submodule "tree-sitter-vim"]
+	path = tree-sitter-vim
+	url = https://github.com/tree-sitter-grammars/tree-sitter-vim
