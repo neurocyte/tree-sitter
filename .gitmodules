@@ -157,3 +157,6 @@
 [submodule "tree-sitter-vim"]
 	path = tree-sitter-vim
 	url = https://github.com/tree-sitter-grammars/tree-sitter-vim
+[submodule "tree-sitter-nu"]
+	path = tree-sitter-nu
+	url = https://github.com/nushell/tree-sitter-nu.git
