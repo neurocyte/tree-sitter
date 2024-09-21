@@ -49,6 +49,7 @@ pub fn build(b: *std.Build) void {
     addParser(b, lib, "nim", null);
     addParser(b, lib, "ninja", null);
     addParser(b, lib, "nix", null);
+    addParser(b, lib, "nu", null);
     addParser(b, lib, "ocaml", "grammars/interface");
     addParser(b, lib, "ocaml", "grammars/ocaml");
     addParser(b, lib, "ocaml", "grammars/type");
