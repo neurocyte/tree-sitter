@@ -9,7 +9,7 @@
 	url = https://github.com/tree-sitter/tree-sitter-json.git
 [submodule "tree-sitter-zig"]
 	path = tree-sitter-zig
-	url = https://github.com/maxxnino/tree-sitter-zig.git
+	url = https://github.com/tree-sitter-grammars/tree-sitter-zig.git
 [submodule "tree-sitter-typescript"]
 	path = tree-sitter-typescript
 	url = https://github.com/tree-sitter/tree-sitter-typescript.git
