@@ -160,3 +160,6 @@
 [submodule "tree-sitter-nu"]
 	path = tree-sitter-nu
 	url = https://github.com/nushell/tree-sitter-nu.git
+[submodule "tree-sitter-hare"]
+	path = tree-sitter-hare
+	url = https://github.com/tree-sitter-grammars/tree-sitter-hare.git
