@@ -33,6 +33,7 @@ pub fn build(b: *std.Build) void {
     addParser(b, lib, "gitcommit", null);
     addParser(b, lib, "git-rebase", null);
     addParser(b, lib, "go", null);
+    addParser(b, lib, "hare", null);
     addParser(b, lib, "haskell", null);
     addParser(b, lib, "html", null);
     addParser(b, lib, "java", null);
