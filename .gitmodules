@@ -163,3 +163,6 @@
 [submodule "tree-sitter-hare"]
 	path = tree-sitter-hare
 	url = https://github.com/tree-sitter-grammars/tree-sitter-hare.git
+[submodule "tree-sitter-swift"]
+	path = tree-sitter-swift
+	url = https://github.com/alex-pinkus/tree-sitter-swift.git

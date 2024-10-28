@@ -66,6 +66,7 @@ pub fn build(b: *std.Build) void {
     addParser(b, lib, "scheme", null);
     addParser(b, lib, "ssh-config", null);
     addParser(b, lib, "superhtml", "tree-sitter-superhtml");
+    addParser(b, lib, "swift", null);
     addParser(b, lib, "toml", null);
     addParser(b, lib, "tsq", null);
     addParser(b, lib, "typescript", "tsx");
