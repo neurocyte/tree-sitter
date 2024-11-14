@@ -166,3 +166,6 @@
 [submodule "tree-sitter-swift"]
 	path = tree-sitter-swift
 	url = https://github.com/alex-pinkus/tree-sitter-swift.git
+[submodule "tree-sitter-gleam"]
+	path = tree-sitter-gleam
+	url = https://github.com/gleam-lang/tree-sitter-gleam
