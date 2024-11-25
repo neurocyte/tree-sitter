@@ -172,3 +172,6 @@
 [submodule "tree-sitter-cmake"]
 	path = tree-sitter-cmake
 	url = https://github.com/uyha/tree-sitter-cmake
+[submodule "tree-sitter-odin"]
+	path = tree-sitter-odin
+	url = https://github.com/ap29600/tree-sitter-odin

@@ -31,6 +31,7 @@ pub fn build(b: *std.Build) void {
     addParser(b, lib, "dockerfile", null);
     addParser(b, lib, "elixir", null);
     addParser(b, lib, "fish", null);
+    addParser(b, lib, "odin", null);
     addParser(b, lib, "gitcommit", null);
     addParser(b, lib, "git-rebase", null);
     addParser(b, lib, "gleam", null);
