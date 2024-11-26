@@ -94,7 +94,7 @@ pub fn build(b: *std.Build) void {
 fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const u8, comptime subdir: ?[]const u8) void {
     const basedir = "tree-sitter-" ++ lang;
     const srcdir = if (subdir) |sub| basedir ++ "/" ++ sub ++ "/src" else basedir ++ "/src";
-    const qrydir = if (subdir) |sub| if (exists(b, basedir ++ "/" ++ sub ++ "/queries")) basedir ++ "/" ++ sub ++ "/queries" else basedir ++ "/queries" else basedir ++ "/queries";
+    const qrydir = find_query_dir(b, lang, subdir);
     const parser = srcdir ++ "/parser.c";
     const scanner = srcdir ++ "/scanner.c";
     const scanner_cc = srcdir ++ "/scanner.cc";
@@ -119,4 +119,18 @@ fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const
 fn exists(b: *std.Build, path: []const u8) bool {
     std.fs.cwd().access(b.pathFromRoot(path), .{ .mode = .read_only }) catch return false;
     return true;
+}
+
+fn find_query_dir(b: *std.Build, comptime lang: []const u8, comptime subdir: ?[]const u8) []const u8 {
+    const basedir = "tree-sitter-" ++ lang;
+
+    var qrydir: ?[]const u8 = if (subdir) |sub| if (exists(b, basedir ++ "/" ++ sub ++ "/queries"))
+        basedir ++ "/" ++ sub ++ "/queries"
+    else
+        null else null;
+
+    if (qrydir == null and exists(b, "queries/" ++ lang))
+        qrydir = "queries/" ++ lang;
+
+    return qrydir orelse basedir ++ "/queries";
 }
