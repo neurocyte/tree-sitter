@@ -24,6 +24,7 @@ pub fn build(b: *std.Build) void {
     addParser(b, lib, "bash", null);
     addParser(b, lib, "c-sharp", null);
     addParser(b, lib, "c", null);
+    addParser(b, lib, "cmake", null);
     addParser(b, lib, "cpp", null);
     addParser(b, lib, "css", null);
     addParser(b, lib, "diff", null);

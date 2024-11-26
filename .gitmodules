@@ -169,3 +169,6 @@
 [submodule "tree-sitter-gleam"]
 	path = tree-sitter-gleam
 	url = https://github.com/gleam-lang/tree-sitter-gleam
+[submodule "tree-sitter-cmake"]
+	path = tree-sitter-cmake
+	url = https://github.com/uyha/tree-sitter-cmake
