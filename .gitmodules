@@ -175,3 +175,6 @@
 [submodule "tree-sitter-odin"]
 	path = tree-sitter-odin
 	url = https://github.com/tree-sitter-grammars/tree-sitter-odin.git
+[submodule "tree-sitter-mail"]
+	path = tree-sitter-mail
+	url = https://github.com/stevenxxiu/tree-sitter-mail.git

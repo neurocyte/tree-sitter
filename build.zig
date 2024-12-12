@@ -46,6 +46,7 @@ pub fn build(b: *std.Build) void {
     addParser(b, lib, "julia", null);
     addParser(b, lib, "kdl", null);
     addParser(b, lib, "lua", null);
+    addParser(b, lib, "mail", null);
     addParser(b, lib, "make", null);
     addParser(b, lib, "markdown", "tree-sitter-markdown");
     addParser(b, lib, "markdown", "tree-sitter-markdown-inline");
