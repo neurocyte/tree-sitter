@@ -181,3 +181,6 @@
 [submodule "tree-sitter-systemverilog"]
 	path = tree-sitter-systemverilog
 	url = https://github.com/gmlarumbe/tree-sitter-systemverilog
+[submodule "tree-sitter-sql"]
+	path = tree-sitter-sql
+	url = git@github.com:DerekStride/tree-sitter-sql.git

@@ -68,6 +68,7 @@ pub fn build(b: *std.Build) void {
     addParser(b, lib, "rust", null);
     addParser(b, lib, "scala", null);
     addParser(b, lib, "scheme", null);
+    addParser(b, lib, "sql", null);
     addParser(b, lib, "ssh-config", null);
     addParser(b, lib, "superhtml", "tree-sitter-superhtml");
     addParser(b, lib, "swift", null);
