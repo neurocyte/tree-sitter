@@ -21,6 +21,7 @@ pub fn build(b: *std.Build) void {
     lib.addCSourceFiles(.{ .files = &.{"tree-sitter/lib/src/lib.c"}, .flags = &flags });
 
     addParser(b, lib, "agda", null);
+    addParser(b, lib, "astro", null);
     addParser(b, lib, "bash", null);
     addParser(b, lib, "c-sharp", null);
     addParser(b, lib, "c", null);
