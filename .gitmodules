@@ -187,3 +187,6 @@
 [submodule "tree-sitter-astro"]
 	path = tree-sitter-astro
 	url = https://github.com/virchau13/tree-sitter-astro.git
+[submodule "tree-sitter-rpmspec"]
+	path = tree-sitter-rpmspec
+	url = https://gitlab.com/cryptomilk/tree-sitter-rpmspec.git
