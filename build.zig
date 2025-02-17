@@ -65,6 +65,7 @@ pub fn build(b: *std.Build) void {
     addParser(b, lib, "purescript", null);
     addParser(b, lib, "python", null);
     addParser(b, lib, "regex", null);
+    addParser(b, lib, "rpmspec", null);
     addParser(b, lib, "ruby", null);
     addParser(b, lib, "rust", null);
     addParser(b, lib, "scala", null);
