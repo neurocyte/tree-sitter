@@ -190,3 +190,6 @@
 [submodule "tree-sitter-rpmspec"]
 	path = tree-sitter-rpmspec
 	url = https://gitlab.com/cryptomilk/tree-sitter-rpmspec.git
+[submodule "tree-sitter-proto"]
+	path = tree-sitter-proto
+	url = https://github.com/sdoerner/tree-sitter-proto.git
