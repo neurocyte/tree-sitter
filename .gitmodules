@@ -184,6 +184,7 @@
 [submodule "tree-sitter-sql"]
 	path = tree-sitter-sql
 	url = https://github.com/DerekStride/tree-sitter-sql.git
+        branch = gh-pages
 [submodule "tree-sitter-astro"]
 	path = tree-sitter-astro
 	url = https://github.com/virchau13/tree-sitter-astro.git
