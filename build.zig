@@ -62,6 +62,7 @@ pub fn build(b: *std.Build) void {
     addParser(b, lib, "openscad", null);
     addParser(b, lib, "org", null);
     addParser(b, lib, "php", "php");
+    addParser(b, lib, "proto", null);
     addParser(b, lib, "purescript", null);
     addParser(b, lib, "python", null);
     addParser(b, lib, "regex", null);
