@@ -193,3 +193,6 @@
 [submodule "tree-sitter-proto"]
 	path = tree-sitter-proto
 	url = https://github.com/sdoerner/tree-sitter-proto.git
+[submodule "tree-sitter-uxntal"]
+	path = tree-sitter-uxntal
+	url = https://github.com/tree-sitter-grammars/tree-sitter-uxntal/
