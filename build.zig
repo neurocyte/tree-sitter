@@ -80,6 +80,7 @@ pub fn build(b: *std.Build) void {
     addParser(b, lib, "typescript", "tsx");
     addParser(b, lib, "typescript", "typescript");
     addParser(b, lib, "typst", null);
+    addParser(b, lib, "uxntal", null);
     addParser(b, lib, "systemverilog", null);
     addParser(b, lib, "vim", null);
     addParser(b, lib, "xml", "dtd");
