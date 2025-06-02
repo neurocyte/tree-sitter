@@ -1,6 +1,7 @@
 #!/bin/sh
+set -e
 touch source.tar.gz
-cd $(dirname $0)/../..
+cd "$(dirname "$0")/../.."
 tar -cvz \
     --exclude-vcs \
     --exclude-vcs-ignores \
@@ -24,6 +25,7 @@ tar -cvz \
     --exclude=tree-sitter-java/bindings \
     --exclude=tree-sitter-java/script \
     --exclude=tree-sitter-java/test \
+    --exclude=tree-sitter-rpmspec/queries/rpmspec \
     --exclude=treez/build.zig \
     --exclude=treez/build.zig.zon \
     -f tree-sitter/source.tar.gz \
