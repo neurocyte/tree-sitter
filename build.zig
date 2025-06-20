@@ -40,6 +40,7 @@ pub fn build(b: *std.Build) void {
         .{ "hare", null },
         .{ "haskell", null },
         .{ "html", null },
+        .{ "hurl", null },
         .{ "java", null },
         .{ "javascript", null },
         .{ "jsdoc", null },
