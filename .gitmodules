@@ -199,3 +199,6 @@
 [submodule "tree-sitter-hurl"]
 	path = tree-sitter-hurl
 	url = https://github.com/pfeiferj/tree-sitter-hurl.git
+[submodule "tree-sitter-powershell"]
+	path = tree-sitter-powershell
+	url = https://github.com/airbus-cert/tree-sitter-powershell.git
