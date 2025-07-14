@@ -8,8 +8,9 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const lib = b.addStaticLibrary(.{
+    const lib = b.addLibrary(.{
         .name = "tree-sitter",
+        .linkage = .static,
         .target = target,
         .optimize = optimize,
     });
