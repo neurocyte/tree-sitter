@@ -37,6 +37,8 @@ pub fn build(b: *std.Build) void {
         .{ "dockerfile", null },
         .{ "elixir", null },
         .{ "fish", null },
+        .{ "fsharp", "fsharp" },
+        .{ "fsharp-signature", "fsharp-signature" },
         .{ "gitcommit", null },
         .{ "git-rebase", null },
         .{ "gleam", null },
