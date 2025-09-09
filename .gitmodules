@@ -202,3 +202,6 @@
 [submodule "tree-sitter-powershell"]
 	path = tree-sitter-powershell
 	url = https://github.com/airbus-cert/tree-sitter-powershell.git
+[submodule "tree-sitter-fsharp"]
+	path = tree-sitter-fsharp
+	url = https://github.com/ionide/tree-sitter-fsharp.git
