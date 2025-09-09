@@ -34,7 +34,7 @@ pub fn build(b: *std.Build) void {
         .{ "elixir", null },
         .{ "fish", null },
         .{ "fsharp", "fsharp" },
-        .{ "fsharp-signature", "fsharp-signature" },
+        .{ "fsharp", "fsharp_signature" },
         .{ "gitcommit", null },
         .{ "git-rebase", null },
         .{ "gleam", null },
