@@ -3,6 +3,7 @@ on:
  push:
     branches:
       - master
+      - zig-0.14
       - zig-0.13
 
 permissions: 
