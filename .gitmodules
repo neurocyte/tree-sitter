@@ -205,3 +205,6 @@
 [submodule "tree-sitter-fsharp"]
 	path = tree-sitter-fsharp
 	url = https://github.com/ionide/tree-sitter-fsharp.git
+[submodule "tree-sitter-commonlisp"]
+	path = tree-sitter-commonlisp
+	url = https://github.com/tree-sitter-grammars/tree-sitter-commonlisp.git
