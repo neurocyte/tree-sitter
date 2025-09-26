@@ -208,3 +208,6 @@
 [submodule "tree-sitter-commonlisp"]
 	path = tree-sitter-commonlisp
 	url = https://github.com/tree-sitter-grammars/tree-sitter-commonlisp.git
+[submodule "tree-sitter-po"]
+	path = tree-sitter-po
+	url = https://github.com/tree-sitter-grammars/tree-sitter-po.git

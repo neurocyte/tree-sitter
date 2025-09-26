@@ -67,6 +67,7 @@ pub fn build(b: *std.Build) void {
         .{ "openscad", null },
         .{ "org", null },
         .{ "php", "php" },
+        .{ "po", null },
         .{ "powershell", null },
         .{ "proto", null },
         .{ "purescript", null },
