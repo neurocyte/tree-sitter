@@ -223,3 +223,6 @@
 [submodule "tree-sitter-elm"]
 	path = tree-sitter-elm
 	url = https://github.com/elm-tooling/tree-sitter-elm.git
+[submodule "tree-sitter-hcl"]
+	path = tree-sitter-hcl
+	url = https://github.com/tree-sitter-grammars/tree-sitter-hcl.git

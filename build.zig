@@ -44,6 +44,7 @@ pub fn build(b: *std.Build) void {
         .{ "go", null },
         .{ "hare", null },
         .{ "haskell", null },
+        .{ "hcl", null },
         .{ "html", null },
         .{ "hurl", null },
         .{ "java", null },
