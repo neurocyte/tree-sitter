@@ -51,6 +51,7 @@ pub fn build(b: *std.Build) void {
         .{ "json", null },
         .{ "julia", null },
         .{ "kdl", null },
+        .{ "latex", null },
         .{ "lua", null },
         .{ "mail", null },
         .{ "make", null },
