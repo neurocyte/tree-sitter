@@ -34,6 +34,7 @@ pub fn build(b: *std.Build) void {
         .{ "diff", null },
         .{ "dockerfile", null },
         .{ "elixir", null },
+        .{ "elm", null },
         .{ "fish", null },
         .{ "fsharp", "fsharp" },
         .{ "fsharp", "fsharp_signature" },
