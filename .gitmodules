@@ -226,3 +226,6 @@
 [submodule "tree-sitter-hcl"]
 	path = tree-sitter-hcl
 	url = https://github.com/tree-sitter-grammars/tree-sitter-hcl.git
+[submodule "tree-sitter-perl"]
+	path = tree-sitter-perl
+	url = https://github.com/tree-sitter-perl/tree-sitter-perl.git

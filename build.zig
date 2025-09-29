@@ -71,6 +71,7 @@ pub fn build(b: *std.Build) void {
         .{ "odin", null },
         .{ "openscad", null },
         .{ "org", null },
+        .{ "perl", null },
         .{ "php", "php" },
         .{ "po", null },
         .{ "powershell", null },
