@@ -211,3 +211,6 @@
 [submodule "tree-sitter-po"]
 	path = tree-sitter-po
 	url = https://github.com/tree-sitter-grammars/tree-sitter-po.git
+[submodule "tree-sitter-awk"]
+	path = tree-sitter-awk
+	url = https://github.com/Beaglefoot/tree-sitter-awk.git
