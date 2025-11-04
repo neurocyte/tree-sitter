@@ -82,6 +82,7 @@
         "tree-sitter-typst",
         "tree-sitter-uxntal",
         "tree-sitter-vim",
+        "tree-sitter-wikitext",
         "tree-sitter-xml",
         "tree-sitter-yaml",
         "tree-sitter-zig",
