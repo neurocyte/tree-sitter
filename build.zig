@@ -101,6 +101,7 @@ pub fn build(b: *std.Build) void {
         .{ "typst", null },
         .{ "uxntal", null },
         .{ "vim", null },
+        .{ "wikitext", null },
         .{ "xml", "dtd" },
         .{ "xml", "xml" },
         .{ "yaml", null },

@@ -232,3 +232,6 @@
 [submodule "tree-sitter-rst"]
 	path = tree-sitter-rst
 	url = https://github.com/stsewd/tree-sitter-rst.git
+[submodule "tree-sitter-wikitext"]
+	path = tree-sitter-wikitext
+	url = https://github.com/santhoshtr/tree-sitter-wikitext.git
