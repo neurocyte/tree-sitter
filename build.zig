@@ -84,6 +84,7 @@ pub fn build(b: *std.Build) void {
         .{ "python", null },
         .{ "regex", null },
         .{ "rpmspec", null },
+        .{ "rst", null },
         .{ "ruby", null },
         .{ "rust", null },
         .{ "scala", null },

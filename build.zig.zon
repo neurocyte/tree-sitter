@@ -66,6 +66,7 @@
         "tree-sitter-python",
         "tree-sitter-regex",
         "tree-sitter-rpmspec",
+        "tree-sitter-rst",
         "tree-sitter-ruby",
         "tree-sitter-rust",
         "tree-sitter-scala",

@@ -229,3 +229,6 @@
 [submodule "tree-sitter-perl"]
 	path = tree-sitter-perl
 	url = https://github.com/tree-sitter-perl/tree-sitter-perl.git
+[submodule "tree-sitter-rst"]
+	path = tree-sitter-rst
+	url = https://github.com/stsewd/tree-sitter-rst.git
