@@ -53,6 +53,7 @@
         "tree-sitter-ninja",
         "tree-sitter-nix",
         "tree-sitter-nu",
+        "tree-sitter-objc",
         "tree-sitter-ocaml",
         "tree-sitter-odin",
         "tree-sitter-openscad",

@@ -235,3 +235,6 @@
 [submodule "tree-sitter-wikitext"]
 	path = tree-sitter-wikitext
 	url = https://github.com/santhoshtr/tree-sitter-wikitext.git
+[submodule "tree-sitter-objc"]
+	path = tree-sitter-objc
+	url = https://github.com/tree-sitter-grammars/tree-sitter-objc

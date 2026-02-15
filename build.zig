@@ -69,6 +69,7 @@ pub fn build(b: *std.Build) void {
         .{ "ninja", null },
         .{ "nix", null },
         .{ "nu", null },
+        .{ "objc", null },
         .{ "ocaml", "grammars/interface" },
         .{ "ocaml", "grammars/ocaml" },
         .{ "ocaml", "grammars/type" },
