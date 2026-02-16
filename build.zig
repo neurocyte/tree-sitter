@@ -26,6 +26,7 @@ pub fn build(b: *std.Build) void {
 
     const language_list = .{
         .{ "agda", null },
+        .{ "asm", null },
         .{ "astro", null },
         .{ "awk", null },
         .{ "bash", null },

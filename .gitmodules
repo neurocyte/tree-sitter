@@ -238,3 +238,6 @@
 [submodule "tree-sitter-objc"]
 	path = tree-sitter-objc
 	url = https://github.com/tree-sitter-grammars/tree-sitter-objc
+[submodule "tree-sitter-asm"]
+	path = tree-sitter-asm
+	url = https://github.com/RubixDev/tree-sitter-asm
