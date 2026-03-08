@@ -36,6 +36,7 @@ pub fn build(b: *std.Build) void {
         .{ "cpp", null },
         .{ "c-sharp", null },
         .{ "css", null },
+        .{ "d", null, true },
         .{ "diff", null },
         .{ "dockerfile", null },
         .{ "elixir", null },
@@ -112,7 +113,8 @@ pub fn build(b: *std.Build) void {
         .{ "zig", null },
     };
     inline for (language_list) |list| {
-        addParser(b, lib, list[0], list[1]);
+    	const custom = if (list.len > 2) list[2] else false;
+        addParser(b, lib, list[0], list[1], custom);
     }
 
     b.installArtifact(lib);
@@ -124,10 +126,10 @@ pub fn build(b: *std.Build) void {
     mod.linkLibrary(lib);
 }
 
-fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const u8, comptime subdir: ?[]const u8) void {
+fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const u8, comptime subdir: ?[]const u8, customQry: bool) void {
     const basedir = "tree-sitter-" ++ lang;
     const srcdir = if (subdir) |sub| basedir ++ "/" ++ sub ++ "/src" else basedir ++ "/src";
-    const qrydir = find_query_dir(b, lang, subdir);
+    const qrydir = find_query_dir(b, lang, subdir, customQry);
     const parser = srcdir ++ "/parser.c";
     const scanner = srcdir ++ "/scanner.c";
     const scanner_cc = srcdir ++ "/scanner.cc";
@@ -149,21 +151,26 @@ fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const
     }
 }
 
-fn exists(b: *std.Build, path: []const u8) bool {
+fn exists(b: *std.Build, path: []const u8, customQry: bool) bool {
     std.fs.cwd().access(b.pathFromRoot(path), .{ .mode = .read_only }) catch return false;
     return true;
 }
 
 fn find_query_dir(b: *std.Build, comptime lang: []const u8, comptime subdir: ?[]const u8) []const u8 {
-    const basedir = "tree-sitter-" ++ lang;
+	const basedir = "tree-sitter-" ++ lang;
 
-    var qrydir: ?[]const u8 = if (subdir) |sub| if (exists(b, basedir ++ "/" ++ sub ++ "/queries"))
-        basedir ++ "/" ++ sub ++ "/queries"
-    else
-        null else null;
+    if (customQry) {
+        return "queries/" ++ lang;
+    }
 
-    if (qrydir == null and exists(b, "queries/" ++ lang))
-        qrydir = "queries/" ++ lang;
+    if (subdir) |sub| {
+        const sub_path = basedir ++ "/" ++ sub ++ "/queries";
+        if (exists(b, sub_path)) return sub_path;
+    }
 
-    return qrydir orelse basedir ++ "/queries";
+    if (exists(b, "queries/" ++ lang)) {
+        return "queries/" ++ lang;
+    }
+
+    return basedir ++ "/queries";
 }
