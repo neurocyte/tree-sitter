@@ -45,6 +45,19 @@
 
 (function_declaration (identifier) @function)
 
+(call_expression
+  . (identifier) @function)
+(call_expression
+  . (property_expression
+    (identifier) @function .))
+(call_expression
+  . (template_instance
+    (identifier) @function))
+(call_expression
+  . (property_expression
+    (template_instance
+      (identifier) @function) .))
+
 (struct_declaration ((identifier) @type))
 (class_declaration ((identifier) @type))
 (enum_declaration ((identifier) @type))
