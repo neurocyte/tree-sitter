@@ -244,3 +244,6 @@
 [submodule "tree-sitter-comment"]
 	path = tree-sitter-comment
 	url = https://github.com/stsewd/tree-sitter-comment
+[submodule "tree-sitter-d"]
+	path = tree-sitter-d
+	url = https://github.com/gdamore/tree-sitter-d
