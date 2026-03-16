@@ -159,13 +159,12 @@ fn exists(b: *std.Build, path: []const u8) bool {
 fn find_query_dir(b: *std.Build, comptime lang: []const u8, comptime subdir: ?[]const u8) []const u8 {
     const basedir = "tree-sitter-" ++ lang;
 
-    var qrydir: ?[]const u8 = if (subdir) |sub| if (exists(b, basedir ++ "/" ++ sub ++ "/queries"))
+    var qrydir: ?[]const u8 = if (exists(b, "queries/" ++ lang))
+        "queries/" ++ lang
+    else if (subdir) |sub| if (exists(b, basedir ++ "/" ++ sub ++ "/queries"))
         basedir ++ "/" ++ sub ++ "/queries"
     else
         null else null;
-
-    if (qrydir == null and exists(b, "queries/" ++ lang))
-        qrydir = "queries/" ++ lang;
 
     return qrydir orelse basedir ++ "/queries";
 }
