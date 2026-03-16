@@ -241,3 +241,6 @@
 [submodule "tree-sitter-asm"]
 	path = tree-sitter-asm
 	url = https://github.com/RubixDev/tree-sitter-asm
+[submodule "tree-sitter-comment"]
+	path = tree-sitter-comment
+	url = https://github.com/stsewd/tree-sitter-comment
