@@ -2,6 +2,7 @@
     .name = .tree_sitter,
     .version = "0.22.4-150-g7e3f5726",
     .fingerprint = 0x841224b4c8e142cf,
+    .minimum_zig_version = "0.15.2",
 
     .paths = .{
         "build.zig",
