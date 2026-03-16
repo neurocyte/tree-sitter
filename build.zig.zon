@@ -18,6 +18,7 @@
         "tree-sitter-bash",
         "tree-sitter-c",
         "tree-sitter-cmake",
+        "tree-sitter-comment",
         "tree-sitter-commonlisp",
         "tree-sitter-cpp",
         "tree-sitter-c-sharp",
