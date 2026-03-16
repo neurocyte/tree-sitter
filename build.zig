@@ -38,6 +38,7 @@ pub fn build(b: *std.Build) void {
         .{ "c-sharp", null },
         .{ "css", null },
         .{ "diff", null },
+        .{ "d", null },
         .{ "dockerfile", null },
         .{ "elixir", null },
         .{ "elm", null },

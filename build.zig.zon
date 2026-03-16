@@ -23,6 +23,7 @@
         "tree-sitter-cpp",
         "tree-sitter-c-sharp",
         "tree-sitter-css",
+        "tree-sitter-d",
         "tree-sitter-diff",
         "tree-sitter-dockerfile",
         "tree-sitter-elixir",
