@@ -70,6 +70,7 @@
         "tree-sitter-proto",
         "tree-sitter-purescript",
         "tree-sitter-python",
+        "tree-sitter-query",
         "tree-sitter-regex",
         "tree-sitter-rpmspec",
         "tree-sitter-rst",
