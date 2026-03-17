@@ -255,3 +255,6 @@
 [submodule "tree-sitter-query"]
 	path = tree-sitter-query
 	url = https://github.com/tree-sitter-grammars/tree-sitter-query.git
+[submodule "tree-sitter-llvm"]
+	path = tree-sitter-llvm
+	url = https://github.com/benwilliamgraham/tree-sitter-llvm.git
