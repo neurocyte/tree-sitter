@@ -252,3 +252,6 @@
 [submodule "tree-sitter-d"]
 	path = tree-sitter-d
 	url = https://github.com/gdamore/tree-sitter-d
+[submodule "tree-sitter-query"]
+	path = tree-sitter-query
+	url = https://github.com/tree-sitter-grammars/tree-sitter-query.git
