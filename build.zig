@@ -8,14 +8,16 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
+    const opts: std.Build.Module.CreateOptions = .{
+        .target = target,
+        .optimize = optimize,
+        .link_libc = true,
+    };
+
     const lib = b.addLibrary(.{
         .name = "tree-sitter",
         .linkage = .static,
-        .root_module = b.createModule(.{
-            .target = target,
-            .optimize = optimize,
-            .link_libc = true,
-        }),
+        .root_module = b.createModule(opts),
     });
 
     lib.linkLibC();
@@ -115,7 +117,7 @@ pub fn build(b: *std.Build) void {
         .{ "zig", null },
     };
     inline for (language_list) |list| {
-        addParser(b, lib, list[0], list[1]);
+        addParser(b, lib, list[0], list[1], opts);
     }
 
     b.installArtifact(lib);
@@ -127,7 +129,7 @@ pub fn build(b: *std.Build) void {
     mod.linkLibrary(lib);
 }
 
-fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const u8, comptime subdir: ?[]const u8) void {
+fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const u8, comptime subdir: ?[]const u8, opts: std.Build.Module.CreateOptions) void {
     const basedir = "tree-sitter-" ++ lang;
     const srcdir = if (subdir) |sub| basedir ++ "/" ++ sub ++ "/src" else basedir ++ "/src";
     const qrydir = find_query_dir(b, lang, subdir);
@@ -135,12 +137,19 @@ fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const
     const scanner = srcdir ++ "/scanner.c";
     const scanner_cc = srcdir ++ "/scanner.cc";
 
-    lib.addCSourceFiles(.{ .files = &.{parser}, .flags = &flags });
+    const obj = b.addObject(.{
+        .name = basedir,
+        .root_module = b.createModule(opts),
+    });
+
+    obj.addCSourceFiles(.{ .files = &.{parser}, .flags = &flags });
     if (exists(b, scanner_cc))
-        lib.addCSourceFiles(.{ .files = &.{scanner_cc}, .flags = &flags });
+        obj.addCSourceFiles(.{ .files = &.{scanner_cc}, .flags = &flags });
     if (exists(b, scanner))
-        lib.addCSourceFiles(.{ .files = &.{scanner}, .flags = &flags });
-    lib.addIncludePath(b.path(srcdir));
+        obj.addCSourceFiles(.{ .files = &.{scanner}, .flags = &flags });
+    obj.addIncludePath(b.path(srcdir));
+
+    lib.addObject(obj);
 
     if (exists(b, qrydir)) {
         b.installDirectory(.{
