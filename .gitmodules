@@ -180,6 +180,7 @@
 [submodule "nvim-treesitter"]
 	path = nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter
+	branch = main
 [submodule "tree-sitter-systemverilog"]
 	path = tree-sitter-systemverilog
 	url = https://github.com/gmlarumbe/tree-sitter-systemverilog
