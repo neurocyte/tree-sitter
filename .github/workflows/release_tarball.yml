@@ -12,8 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Clone repo
+        run: |
+            git clone https://github.com/${{ github.repository }} .
+            pwd
+            git checkout ${{ github.sha }}
+            pwd
+            git submodule init
+            pwd
+            git submodule status | grep '^-' | cut -d " " -f2 | parallel git submodule update --recommend-shallow {}
 
       - name: Changelog
         uses: Bullrich/generate-release-changelog@master

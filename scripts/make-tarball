@@ -6,14 +6,7 @@ pwd
 
 touch source.tar.gz
 
-cd "$(dirname "$0")/.."
-pwd
-
-sudo chown -vR "$USER:$USER" .git
-git submodule update --init --recommend-shallow
-
-cd ..
-pwd
+cd "$(dirname "$0")/../.."
 
 tar -cvz \
     --exclude-vcs \
