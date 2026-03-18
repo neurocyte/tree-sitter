@@ -138,19 +138,35 @@ fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const
     const scanner = srcdir ++ "/scanner.c";
     const scanner_cc = srcdir ++ "/scanner.cc";
 
-    const obj = b.addObject(.{
-        .name = basedir,
-        .root_module = b.createModule(opts),
-    });
+    {
+        const obj = b.addObject(.{
+            .name = basedir ++ "-parser",
+            .root_module = b.createModule(opts),
+        });
+        obj.addCSourceFiles(.{ .files = &.{parser}, .flags = &flags });
+        obj.addIncludePath(b.path(srcdir));
+        lib.addObject(obj);
+    }
 
-    obj.addCSourceFiles(.{ .files = &.{parser}, .flags = &flags });
-    if (exists(b, scanner_cc))
-        obj.addCSourceFiles(.{ .files = &.{scanner_cc}, .flags = &flags });
-    if (exists(b, scanner))
+    if (exists(b, scanner)) {
+        const obj = b.addObject(.{
+            .name = basedir ++ "-scanner",
+            .root_module = b.createModule(opts),
+        });
         obj.addCSourceFiles(.{ .files = &.{scanner}, .flags = &flags });
-    obj.addIncludePath(b.path(srcdir));
+        obj.addIncludePath(b.path(srcdir));
+        lib.addObject(obj);
+    }
 
-    lib.addObject(obj);
+    if (exists(b, scanner_cc)) {
+        const obj = b.addObject(.{
+            .name = basedir ++ "-scanner-cc",
+            .root_module = b.createModule(opts),
+        });
+        obj.addCSourceFiles(.{ .files = &.{scanner_cc}, .flags = &flags });
+        obj.addIncludePath(b.path(srcdir));
+        lib.addObject(obj);
+    }
 
     if (exists(b, qrydir)) {
         b.installDirectory(.{
