@@ -2,6 +2,7 @@
 set -e
 touch source.tar.gz
 cd "$(dirname "$0")/.."
+sudo chown -R "$USER:$USER" .git
 git submodule update --init --recommend-shallow
 cd ..
 tar -cvz \
