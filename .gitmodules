@@ -2,7 +2,6 @@
 	path = tree-sitter
 	url = https://github.com/tree-sitter/tree-sitter.git
 	branch = release-0.26
-	shallow = true
 [submodule "tree-sitter-cpp"]
 	path = tree-sitter-cpp
 	url = https://github.com/tree-sitter/tree-sitter-cpp.git
