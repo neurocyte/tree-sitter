@@ -1,7 +1,9 @@
 #!/bin/sh
 set -e
 touch source.tar.gz
-cd "$(dirname "$0")/../.."
+cd "$(dirname "$0")/.."
+git submodule update --init --recommend-shallow
+cd ..
 tar -cvz \
     --exclude-vcs \
     --exclude-vcs-ignores \

@@ -2,259 +2,344 @@
 	path = tree-sitter
 	url = https://github.com/tree-sitter/tree-sitter.git
 	branch = release-0.26
+	shallow = true
 [submodule "tree-sitter-cpp"]
 	path = tree-sitter-cpp
 	url = https://github.com/tree-sitter/tree-sitter-cpp.git
+	shallow = true
 [submodule "tree-sitter-json"]
 	path = tree-sitter-json
 	url = https://github.com/tree-sitter/tree-sitter-json.git
+	shallow = true
 [submodule "tree-sitter-zig"]
 	path = tree-sitter-zig
 	url = https://github.com/tree-sitter-grammars/tree-sitter-zig.git
+	shallow = true
 [submodule "tree-sitter-typescript"]
 	path = tree-sitter-typescript
 	url = https://github.com/tree-sitter/tree-sitter-typescript.git
+	shallow = true
 [submodule "tree-sitter-scala"]
 	path = tree-sitter-scala
 	url = https://github.com/tree-sitter/tree-sitter-scala.git
+	shallow = true
 [submodule "tree-sitter-haskell"]
 	path = tree-sitter-haskell
 	url = https://github.com/tree-sitter/tree-sitter-haskell.git
+	shallow = true
 [submodule "tree-sitter-python"]
 	path = tree-sitter-python
 	url = https://github.com/tree-sitter/tree-sitter-python.git
+	shallow = true
 [submodule "tree-sitter-rust"]
 	path = tree-sitter-rust
 	url = https://github.com/tree-sitter/tree-sitter-rust.git
+	shallow = true
 [submodule "tree-sitter-julia"]
 	path = tree-sitter-julia
 	url = https://github.com/tree-sitter/tree-sitter-julia.git
+	shallow = true
 [submodule "tree-sitter-bash"]
 	path = tree-sitter-bash
 	url = https://github.com/tree-sitter/tree-sitter-bash.git
+	shallow = true
 [submodule "tree-sitter-php"]
 	path = tree-sitter-php
 	url = https://github.com/tree-sitter/tree-sitter-php.git
+	shallow = true
 [submodule "tree-sitter-agda"]
 	path = tree-sitter-agda
 	url = https://github.com/tree-sitter/tree-sitter-agda.git
+	shallow = true
 [submodule "tree-sitter-c-sharp"]
 	path = tree-sitter-c-sharp
 	url = https://github.com/tree-sitter/tree-sitter-c-sharp.git
+	shallow = true
 [submodule "tree-sitter-java"]
 	path = tree-sitter-java
 	url = https://github.com/tree-sitter/tree-sitter-java.git
+	shallow = true
 [submodule "tree-sitter-javascript"]
 	path = tree-sitter-javascript
 	url = https://github.com/tree-sitter/tree-sitter-javascript.git
+	shallow = true
 [submodule "tree-sitter-jsdoc"]
 	path = tree-sitter-jsdoc
 	url = https://github.com/tree-sitter/tree-sitter-jsdoc.git
+	shallow = true
 [submodule "tree-sitter-css"]
 	path = tree-sitter-css
 	url = https://github.com/tree-sitter/tree-sitter-css.git
+	shallow = true
 [submodule "tree-sitter-c"]
 	path = tree-sitter-c
 	url = https://github.com/tree-sitter/tree-sitter-c.git
+	shallow = true
 [submodule "tree-sitter-tsq"]
 	path = tree-sitter-tsq
 	url = https://github.com/tree-sitter/tree-sitter-tsq.git
+	shallow = true
 [submodule "tree-sitter-go"]
 	path = tree-sitter-go
 	url = https://github.com/tree-sitter/tree-sitter-go.git
+	shallow = true
 [submodule "tree-sitter-regex"]
 	path = tree-sitter-regex
 	url = https://github.com/tree-sitter/tree-sitter-regex.git
+	shallow = true
 [submodule "tree-sitter-ocaml"]
 	path = tree-sitter-ocaml
 	url = https://github.com/tree-sitter/tree-sitter-ocaml.git
+	shallow = true
 [submodule "tree-sitter-html"]
 	path = tree-sitter-html
 	url = https://github.com/tree-sitter/tree-sitter-html.git
+	shallow = true
 [submodule "tree-sitter-ruby"]
 	path = tree-sitter-ruby
 	url = https://github.com/tree-sitter/tree-sitter-ruby.git
+	shallow = true
 [submodule "tree-sitter-toml"]
 	path = tree-sitter-toml
 	url = https://github.com/tree-sitter/tree-sitter-toml.git
+	shallow = true
 [submodule "tree-sitter-gitcommit"]
 	path = tree-sitter-gitcommit
 	url = https://github.com/gbprod/tree-sitter-gitcommit.git
+	shallow = true
 [submodule "tree-sitter-diff"]
 	path = tree-sitter-diff
 	url = https://github.com/the-mikedavis/tree-sitter-diff.git
+	shallow = true
 [submodule "tree-sitter-git-rebase"]
 	path = tree-sitter-git-rebase
 	url = https://github.com/the-mikedavis/tree-sitter-git-rebase.git
+	shallow = true
 [submodule "tree-sitter-ssh-config"]
 	path = tree-sitter-ssh-config
 	url = https://github.com/ObserverOfTime/tree-sitter-ssh-config.git
+	shallow = true
 [submodule "tree-sitter-scheme"]
 	path = tree-sitter-scheme
 	url = https://github.com/6cdh/tree-sitter-scheme.git
+	shallow = true
 [submodule "tree-sitter-purescript"]
 	path = tree-sitter-purescript
 	url = https://github.com/postsolar/tree-sitter-purescript.git
+	shallow = true
 [submodule "tree-sitter-nix"]
 	path = tree-sitter-nix
 	url = https://github.com/nix-community/tree-sitter-nix.git
+	shallow = true
 [submodule "tree-sitter-ninja"]
 	path = tree-sitter-ninja
 	url = https://github.com/alemuller/tree-sitter-ninja.git
+	shallow = true
 [submodule "tree-sitter-markdown"]
 	path = tree-sitter-markdown
 	url = https://github.com/tree-sitter-grammars/tree-sitter-markdown.git
+	shallow = true
 [submodule "tree-sitter-nasm"]
 	path = tree-sitter-nasm
 	url = https://github.com/naclsn/tree-sitter-nasm.git
+	shallow = true
 [submodule "tree-sitter-make"]
 	path = tree-sitter-make
 	url = https://github.com/alemuller/tree-sitter-make.git
+	shallow = true
 [submodule "tree-sitter-lua"]
 	path = tree-sitter-lua
 	url = https://github.com/MunifTanjim/tree-sitter-lua.git
+	shallow = true
 [submodule "tree-sitter-fish"]
 	path = tree-sitter-fish
 	url = https://github.com/ram02z/tree-sitter-fish.git
+	shallow = true
 [submodule "tree-sitter-dockerfile"]
 	path = tree-sitter-dockerfile
 	url = https://github.com/camdencheek/tree-sitter-dockerfile.git
+	shallow = true
 [submodule "treez"]
 	path = treez
 	url = https://github.com/neurocyte/treez.git
+	shallow = true
 [submodule "tree-sitter-openscad"]
 	path = tree-sitter-openscad
 	url = https://github.com/bollian/tree-sitter-openscad.git
+	shallow = true
 [submodule "tree-sitter-xml"]
 	path = tree-sitter-xml
 	url = https://github.com/tree-sitter-grammars/tree-sitter-xml.git
+	shallow = true
 [submodule "tree-sitter-org"]
 	path = tree-sitter-org
 	url = https://github.com/milisims/tree-sitter-org.git
+	shallow = true
 [submodule "tree-sitter-ziggy"]
 	path = tree-sitter-ziggy
 	url = https://github.com/kristoff-it/ziggy.git
+	shallow = true
 [submodule "tree-sitter-nim"]
 	path = tree-sitter-nim
 	url = https://github.com/alaviss/tree-sitter-nim.git
+	shallow = true
 [submodule "tree-sitter-kdl"]
 	path = tree-sitter-kdl
 	url = https://github.com/tree-sitter-grammars/tree-sitter-kdl.git
+	shallow = true
 [submodule "tree-sitter-yaml"]
 	path = tree-sitter-yaml
 	url = https://github.com/tree-sitter-grammars/tree-sitter-yaml.git
+	shallow = true
 [submodule "tree-sitter-superhtml"]
 	path = tree-sitter-superhtml
 	url = https://github.com/kristoff-it/superhtml
+	shallow = true
 [submodule "tree-sitter-elixir"]
 	path = tree-sitter-elixir
 	url = https://github.com/elixir-lang/tree-sitter-elixir
+	shallow = true
 [submodule "tree-sitter-typst"]
 	path = tree-sitter-typst
 	url = https://github.com/uben0/tree-sitter-typst
+	shallow = true
 [submodule "tree-sitter-vim"]
 	path = tree-sitter-vim
 	url = https://github.com/tree-sitter-grammars/tree-sitter-vim
+	shallow = true
 [submodule "tree-sitter-nu"]
 	path = tree-sitter-nu
 	url = https://github.com/nushell/tree-sitter-nu.git
+	shallow = true
 [submodule "tree-sitter-hare"]
 	path = tree-sitter-hare
 	url = https://github.com/tree-sitter-grammars/tree-sitter-hare.git
+	shallow = true
 [submodule "tree-sitter-swift"]
 	path = tree-sitter-swift
 	url = https://github.com/alex-pinkus/tree-sitter-swift.git
 	branch = with-generated-files
+	shallow = true
 [submodule "tree-sitter-gleam"]
 	path = tree-sitter-gleam
 	url = https://github.com/gleam-lang/tree-sitter-gleam
+	shallow = true
 [submodule "tree-sitter-cmake"]
 	path = tree-sitter-cmake
 	url = https://github.com/uyha/tree-sitter-cmake
+	shallow = true
 [submodule "tree-sitter-odin"]
 	path = tree-sitter-odin
 	url = https://github.com/tree-sitter-grammars/tree-sitter-odin.git
+	shallow = true
 [submodule "tree-sitter-mail"]
 	path = tree-sitter-mail
 	url = https://github.com/stevenxxiu/tree-sitter-mail.git
+	shallow = true
 [submodule "nvim-treesitter"]
 	path = nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter
 	branch = main
+	shallow = true
 [submodule "tree-sitter-systemverilog"]
 	path = tree-sitter-systemverilog
 	url = https://github.com/gmlarumbe/tree-sitter-systemverilog
+	shallow = true
 [submodule "tree-sitter-sql"]
 	path = tree-sitter-sql
 	url = https://github.com/DerekStride/tree-sitter-sql.git
 	branch = gh-pages
+	shallow = true
 [submodule "tree-sitter-astro"]
 	path = tree-sitter-astro
 	url = https://github.com/virchau13/tree-sitter-astro.git
+	shallow = true
 [submodule "tree-sitter-rpmspec"]
 	path = tree-sitter-rpmspec
 	url = https://gitlab.com/cryptomilk/tree-sitter-rpmspec.git
+	shallow = true
 [submodule "tree-sitter-proto"]
 	path = tree-sitter-proto
 	url = https://github.com/sdoerner/tree-sitter-proto.git
+	shallow = true
 [submodule "tree-sitter-uxntal"]
 	path = tree-sitter-uxntal
 	url = https://github.com/tree-sitter-grammars/tree-sitter-uxntal/
+	shallow = true
 [submodule "tree-sitter-hurl"]
 	path = tree-sitter-hurl
 	url = https://github.com/pfeiferj/tree-sitter-hurl.git
+	shallow = true
 [submodule "tree-sitter-powershell"]
 	path = tree-sitter-powershell
 	url = https://github.com/airbus-cert/tree-sitter-powershell.git
+	shallow = true
 [submodule "tree-sitter-fsharp"]
 	path = tree-sitter-fsharp
 	url = https://github.com/ionide/tree-sitter-fsharp.git
+	shallow = true
 [submodule "tree-sitter-commonlisp"]
 	path = tree-sitter-commonlisp
 	url = https://github.com/tree-sitter-grammars/tree-sitter-commonlisp.git
+	shallow = true
 [submodule "tree-sitter-po"]
 	path = tree-sitter-po
 	url = https://github.com/tree-sitter-grammars/tree-sitter-po.git
+	shallow = true
 [submodule "tree-sitter-awk"]
 	path = tree-sitter-awk
 	url = https://github.com/Beaglefoot/tree-sitter-awk.git
+	shallow = true
 [submodule "tree-sitter-latex"]
 	path = tree-sitter-latex
 	url = https://github.com/neurocyte/tree-sitter-latex.git
+	shallow = true
 [submodule "tree-sitter-nickel"]
 	path = tree-sitter-nickel
 	url = https://github.com/nickel-lang/tree-sitter-nickel.git
+	shallow = true
 [submodule "tree-sitter-elm"]
 	path = tree-sitter-elm
 	url = https://github.com/elm-tooling/tree-sitter-elm.git
+	shallow = true
 [submodule "tree-sitter-hcl"]
 	path = tree-sitter-hcl
 	url = https://github.com/tree-sitter-grammars/tree-sitter-hcl.git
+	shallow = true
 [submodule "tree-sitter-perl"]
 	path = tree-sitter-perl
 	url = https://github.com/tree-sitter-perl/tree-sitter-perl.git
 	branch = release
+	shallow = true
 [submodule "tree-sitter-rst"]
 	path = tree-sitter-rst
 	url = https://github.com/stsewd/tree-sitter-rst.git
+	shallow = true
 [submodule "tree-sitter-wikitext"]
 	path = tree-sitter-wikitext
 	url = https://github.com/santhoshtr/tree-sitter-wikitext.git
+	shallow = true
 [submodule "tree-sitter-objc"]
 	path = tree-sitter-objc
 	url = https://github.com/tree-sitter-grammars/tree-sitter-objc
+	shallow = true
 [submodule "tree-sitter-asm"]
 	path = tree-sitter-asm
 	url = https://github.com/RubixDev/tree-sitter-asm
+	shallow = true
 [submodule "tree-sitter-comment"]
 	path = tree-sitter-comment
 	url = https://github.com/stsewd/tree-sitter-comment
+	shallow = true
 [submodule "tree-sitter-d"]
 	path = tree-sitter-d
 	url = https://github.com/gdamore/tree-sitter-d
+	shallow = true
 [submodule "tree-sitter-query"]
 	path = tree-sitter-query
 	url = https://github.com/tree-sitter-grammars/tree-sitter-query.git
+	shallow = true
 [submodule "tree-sitter-llvm"]
 	path = tree-sitter-llvm
 	url = https://github.com/benwilliamgraham/tree-sitter-llvm.git
+	shallow = true
