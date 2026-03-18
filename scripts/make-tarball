@@ -1,10 +1,20 @@
 #!/bin/sh
 set -e
+set -x
+
+pwd
+
 touch source.tar.gz
+
 cd "$(dirname "$0")/.."
-sudo chown -R "$USER:$USER" .git
+pwd
+
+sudo chown -vR "$USER:$USER" .git
 git submodule update --init --recommend-shallow
+
 cd ..
+pwd
+
 tar -cvz \
     --exclude-vcs \
     --exclude-vcs-ignores \
