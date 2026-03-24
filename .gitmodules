@@ -136,7 +136,7 @@
 	shallow = true
 [submodule "tree-sitter-markdown"]
 	path = tree-sitter-markdown
-	url = https://github.com/tree-sitter-grammars/tree-sitter-markdown.git
+	url = https://github.com/neurocyte/tree-sitter-markdown.git
 	shallow = true
 [submodule "tree-sitter-nasm"]
 	path = tree-sitter-nasm
