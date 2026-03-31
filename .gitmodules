@@ -342,3 +342,6 @@
 	path = tree-sitter-llvm
 	url = https://github.com/benwilliamgraham/tree-sitter-llvm.git
 	shallow = true
+[submodule "tree-sitter-v"]
+	path = tree-sitter-v
+	url = https://github.com/vlang/v-analyzer.git

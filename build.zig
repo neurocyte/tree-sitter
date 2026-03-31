@@ -108,6 +108,7 @@ pub fn build(b: *std.Build) void {
         .{ "typescript", "typescript" },
         .{ "typst", null },
         .{ "uxntal", null },
+        .{ "v", "tree_sitter_v" },
         .{ "vim", null },
         .{ "wikitext", null },
         .{ "xml", "dtd" },
