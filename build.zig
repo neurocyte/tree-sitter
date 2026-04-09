@@ -20,11 +20,11 @@ pub fn build(b: *std.Build) void {
         .root_module = b.createModule(opts),
     });
 
-    lib.linkLibC();
-    lib.linkLibCpp();
-    lib.addIncludePath(b.path("tree-sitter/lib/include"));
-    lib.addIncludePath(b.path("tree-sitter/lib/src"));
-    lib.addCSourceFiles(.{ .files = &.{"tree-sitter/lib/src/lib.c"}, .flags = &flags });
+    lib.root_module.link_libc = true;
+    lib.root_module.link_libcpp = true;
+    lib.root_module.addIncludePath(b.path("tree-sitter/lib/include"));
+    lib.root_module.addIncludePath(b.path("tree-sitter/lib/src"));
+    lib.root_module.addCSourceFiles(.{ .files = &.{"tree-sitter/lib/src/lib.c"}, .flags = &flags });
 
     const language_list = .{
         .{ "agda", null },
@@ -144,9 +144,9 @@ fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const
             .name = basedir ++ "-parser",
             .root_module = b.createModule(opts),
         });
-        obj.addCSourceFiles(.{ .files = &.{parser}, .flags = &flags });
-        obj.addIncludePath(b.path(srcdir));
-        lib.addObject(obj);
+        obj.root_module.addCSourceFiles(.{ .files = &.{parser}, .flags = &flags });
+        obj.root_module.addIncludePath(b.path(srcdir));
+        lib.root_module.addObject(obj);
     }
 
     if (exists(b, scanner)) {
@@ -154,9 +154,9 @@ fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const
             .name = basedir ++ "-scanner",
             .root_module = b.createModule(opts),
         });
-        obj.addCSourceFiles(.{ .files = &.{scanner}, .flags = &flags });
-        obj.addIncludePath(b.path(srcdir));
-        lib.addObject(obj);
+        obj.root_module.addCSourceFiles(.{ .files = &.{scanner}, .flags = &flags });
+        obj.root_module.addIncludePath(b.path(srcdir));
+        lib.root_module.addObject(obj);
     }
 
     if (exists(b, scanner_cc)) {
@@ -164,9 +164,9 @@ fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const
             .name = basedir ++ "-scanner-cc",
             .root_module = b.createModule(opts),
         });
-        obj.addCSourceFiles(.{ .files = &.{scanner_cc}, .flags = &flags });
-        obj.addIncludePath(b.path(srcdir));
-        lib.addObject(obj);
+        obj.root_module.addCSourceFiles(.{ .files = &.{scanner_cc}, .flags = &flags });
+        obj.root_module.addIncludePath(b.path(srcdir));
+        lib.root_module.addObject(obj);
     }
 
     if (exists(b, qrydir)) {
@@ -180,7 +180,7 @@ fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const
 }
 
 fn exists(b: *std.Build, path: []const u8) bool {
-    std.fs.cwd().access(b.pathFromRoot(path), .{ .mode = .read_only }) catch return false;
+    std.Io.Dir.cwd().access(b.graph.io, b.pathFromRoot(path), .{ .read = true }) catch return false;
     return true;
 }
 
