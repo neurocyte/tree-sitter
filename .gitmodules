@@ -345,3 +345,6 @@
 [submodule "tree-sitter-v"]
 	path = tree-sitter-v
 	url = https://github.com/vlang/v-analyzer.git
+[submodule "tree-sitter-kotlin"]
+	path = tree-sitter-kotlin
+	url = https://github.com/fwcd/tree-sitter-kotlin
