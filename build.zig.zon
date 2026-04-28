@@ -46,6 +46,7 @@
         "tree-sitter-json",
         "tree-sitter-julia",
         "tree-sitter-kdl",
+        "tree-sitter-kotlin",
         "tree-sitter-latex",
         "tree-sitter-llvm",
         "tree-sitter-lua",
