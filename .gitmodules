@@ -348,3 +348,6 @@
 [submodule "tree-sitter-kotlin"]
 	path = tree-sitter-kotlin
 	url = https://github.com/fwcd/tree-sitter-kotlin
+[submodule "tree-sitter-c3"]
+	path = tree-sitter-c3
+	url = https://github.com/c3lang/tree-sitter-c3
