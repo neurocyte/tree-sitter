@@ -18,6 +18,7 @@
         "tree-sitter-awk",
         "tree-sitter-bash",
         "tree-sitter-c",
+        "tree-sitter-c3",
         "tree-sitter-cmake",
         "tree-sitter-comment",
         "tree-sitter-commonlisp",
