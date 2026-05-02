@@ -32,6 +32,7 @@
         "tree-sitter-elm",
         "tree-sitter-fish",
         "tree-sitter-fsharp",
+        "tree-sitter-gdscript",
         "tree-sitter-gitcommit",
         "tree-sitter-git-rebase",
         "tree-sitter-gleam",

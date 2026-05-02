@@ -48,6 +48,7 @@ pub fn build(b: *std.Build) void {
         .{ "fish", null },
         .{ "fsharp", "fsharp" },
         .{ "fsharp", "fsharp_signature" },
+        .{ "gdscript", null },
         .{ "gitcommit", null },
         .{ "git-rebase", null },
         .{ "gleam", null },

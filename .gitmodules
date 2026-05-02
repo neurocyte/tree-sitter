@@ -351,3 +351,6 @@
 [submodule "tree-sitter-c3"]
 	path = tree-sitter-c3
 	url = https://github.com/c3lang/tree-sitter-c3
+[submodule "tree-sitter-gdscript"]
+	path = tree-sitter-gdscript
+	url = https://github.com/PrestonKnopp/tree-sitter-gdscript.git
