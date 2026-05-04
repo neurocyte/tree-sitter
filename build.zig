@@ -113,6 +113,7 @@ pub fn build(b: *std.Build) void {
         .{ "uxntal", null },
         .{ "v", "tree_sitter_v" },
         .{ "vim", null },
+        .{ "vue", null },
         .{ "wikitext", null },
         .{ "xml", "dtd" },
         .{ "xml", "xml" },
