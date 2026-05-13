@@ -31,7 +31,9 @@ tar -cvz \
     --exclude=tree-sitter-java/bindings \
     --exclude=tree-sitter-java/script \
     --exclude=tree-sitter-java/test \
+    --exclude=tree-sitter-rpmspec/neovim \
     --exclude=tree-sitter-rpmspec/queries/rpmspec \
+    --exclude=tree-sitter-rpmspec/rpmspec/queries/rpmspec \
     --exclude=treez/build.zig \
     --exclude=treez/build.zig.zon \
     -f tree-sitter/source.tar.gz \
