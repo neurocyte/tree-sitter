@@ -6,9 +6,6 @@ pwd
 
 touch source.tar.gz
 
-# delete all links to avoid unpacking errors on windows
-find . -type l -delete
-
 cd "$(dirname "$0")/../.."
 
 tar -cvz \
