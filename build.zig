@@ -63,6 +63,7 @@ pub fn build(b: *std.Build) void {
         .{ "jsdoc", null },
         .{ "json", null },
         .{ "julia", null },
+        .{ "just", null },
         .{ "kdl", null },
         .{ "kotlin", null },
         .{ "latex", null },
