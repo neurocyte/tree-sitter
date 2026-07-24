@@ -17,6 +17,7 @@
         "tree-sitter-astro",
         "tree-sitter-awk",
         "tree-sitter-bash",
+        "tree-sitter-bibtex",
         "tree-sitter-c",
         "tree-sitter-c3",
         "tree-sitter-cmake",

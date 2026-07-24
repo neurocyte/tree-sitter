@@ -32,6 +32,7 @@ pub fn build(b: *std.Build) void {
         .{ "astro", null },
         .{ "awk", null },
         .{ "bash", null },
+        .{ "bibtex", null },
         .{ "cmake", null },
         .{ "c", null },
         .{ "c3", null},
