@@ -357,3 +357,6 @@
 [submodule "tree-sitter-vue"]
 	path = tree-sitter-vue
 	url = https://github.com/tree-sitter-grammars/tree-sitter-vue
+[submodule "tree-sitter-ink"]
+	path = tree-sitter-ink
+	url = https://github.com/rhizoome/tree-sitter-ink2
