@@ -3,6 +3,8 @@ on:
  push:
     branches:
       - master
+      - zig-0.16
+ workflow_dispatch:
 
 permissions: 
  contents: write
