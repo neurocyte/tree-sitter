@@ -42,6 +42,7 @@
         "tree-sitter-hcl",
         "tree-sitter-html",
         "tree-sitter-hurl",
+        "tree-sitter-ink",
         "tree-sitter-java",
         "tree-sitter-javascript",
         "tree-sitter-jsdoc",

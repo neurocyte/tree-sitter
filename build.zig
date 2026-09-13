@@ -58,6 +58,7 @@ pub fn build(b: *std.Build) void {
         .{ "hcl", null },
         .{ "html", null },
         .{ "hurl", null },
+        .{ "ink", null },
         .{ "java", null },
         .{ "javascript", null },
         .{ "jsdoc", null },
