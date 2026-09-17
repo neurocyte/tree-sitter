@@ -121,6 +121,7 @@ pub fn build(b: *std.Build) void {
         .{ "v", "tree_sitter_v" },
         .{ "vim", null },
         .{ "vue", null },
+        .{ "wat", null },
         .{ "wgsl", null },
         .{ "wikitext", null },
         .{ "xml", "dtd" },

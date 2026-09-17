@@ -384,3 +384,7 @@
 	path = tree-sitter-unison
 	url = https://github.com/kylegoetz/tree-sitter-unison
 	shallow = true
+[submodule "tree-sitter-wat"]
+	path = tree-sitter-wat
+	url = https://github.com/g-plane/tree-sitter-wat.git
+	shallow = true

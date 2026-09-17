@@ -100,6 +100,7 @@
         "tree-sitter-v",
         "tree-sitter-vim",
         "tree-sitter-vue",
+        "tree-sitter-wat",
         "tree-sitter-wgsl",
         "tree-sitter-wikitext",
         "tree-sitter-xml",
