@@ -112,6 +112,7 @@ pub fn build(b: *std.Build) void {
         .{ "supermd", "tree-sitter/supermd-inline" },
         .{ "swift", null },
         .{ "systemverilog", null },
+        .{ "thrift", null },
         .{ "toml", null },
         .{ "typescript", "tsx" },
         .{ "typescript", "typescript" },

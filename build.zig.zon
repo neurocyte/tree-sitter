@@ -91,6 +91,7 @@
         "tree-sitter-supermd",
         "tree-sitter-swift",
         "tree-sitter-systemverilog",
+        "tree-sitter-thrift",
         "tree-sitter-toml",
         "tree-sitter-tsq",
         "tree-sitter-typescript",

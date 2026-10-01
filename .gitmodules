@@ -388,3 +388,7 @@
 	path = tree-sitter-wat
 	url = https://github.com/g-plane/tree-sitter-wat.git
 	shallow = true
+[submodule "tree-sitter-thrift"]
+	path = tree-sitter-thrift
+	url = https://github.com/tree-sitter-grammars/tree-sitter-thrift
+	shallow = true
