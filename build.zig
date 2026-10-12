@@ -116,6 +116,7 @@ pub fn build(b: *std.Build) void {
         .{ "typescript", "tsx" },
         .{ "typescript", "typescript" },
         .{ "typst", null },
+        .{ "unison", null },
         .{ "uxntal", null },
         .{ "v", "tree_sitter_v" },
         .{ "vim", null },

@@ -380,3 +380,7 @@
 	path = tree-sitter-supermd
 	url = https://github.com/kristoff-it/supermd.git
 	shallow = true
+[submodule "tree-sitter-unison"]
+	path = tree-sitter-unison
+	url = https://github.com/kylegoetz/tree-sitter-unison
+	shallow = true

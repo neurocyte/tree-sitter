@@ -95,6 +95,7 @@
         "tree-sitter-tsq",
         "tree-sitter-typescript",
         "tree-sitter-typst",
+        "tree-sitter-unison",
         "tree-sitter-uxntal",
         "tree-sitter-v",
         "tree-sitter-vim",
