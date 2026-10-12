@@ -392,3 +392,7 @@
 	path = tree-sitter-thrift
 	url = https://github.com/tree-sitter-grammars/tree-sitter-thrift
 	shallow = true
+[submodule "tree-sitter-heex"]
+	path = tree-sitter-heex
+	url = https://github.com/phoenixframework/tree-sitter-heex
+	shallow = true

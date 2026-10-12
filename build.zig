@@ -57,6 +57,7 @@ pub fn build(b: *std.Build) void {
         .{ "hare", null },
         .{ "haskell", null },
         .{ "hcl", null },
+        .{ "heex", null },
         .{ "html", null },
         .{ "hurl", null },
         .{ "ink", null },

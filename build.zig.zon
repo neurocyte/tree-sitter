@@ -41,6 +41,7 @@
         "tree-sitter-hare",
         "tree-sitter-haskell",
         "tree-sitter-hcl",
+        "tree-sitter-heex",
         "tree-sitter-html",
         "tree-sitter-hurl",
         "tree-sitter-ink",
