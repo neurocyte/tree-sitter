@@ -37,7 +37,7 @@ pub fn build(b: *std.Build) void {
         .{ "bibtex", null },
         .{ "cmake", null },
         .{ "c", null },
-        .{ "c3", null},
+        .{ "c3", null },
         .{ "capnp", null },
         .{ "comment", null },
         .{ "commonlisp", null },
