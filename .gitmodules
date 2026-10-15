@@ -370,7 +370,9 @@
 	shallow = true
 [submodule "tree-sitter-just"]
 	path = tree-sitter-just
-	url = https://github.com/poliorcetics/tree-sitter-just
+	url = https://github.com/casey/tree-sitter-just.git
+	shallow = true
 [submodule "tree-sitter-bibtex"]
 	path = tree-sitter-bibtex
 	url = https://github.com/latex-lsp/tree-sitter-bibtex
+	shallow = true
