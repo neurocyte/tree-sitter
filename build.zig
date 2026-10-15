@@ -107,6 +107,7 @@ pub fn build(b: *std.Build) void {
         .{ "python", null },
         .{ "query", null },
         .{ "regex", null },
+        .{ "roc", null },
         .{ "rpmspec", "rpmbash" },
         .{ "rpmspec", "rpmspec" },
         .{ "rst", null },

@@ -87,6 +87,7 @@
         "tree-sitter-python",
         "tree-sitter-query",
         "tree-sitter-regex",
+        "tree-sitter-roc",
         "tree-sitter-rpmspec",
         "tree-sitter-rst",
         "tree-sitter-ruby",

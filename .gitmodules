@@ -432,3 +432,7 @@
 	path = tree-sitter-capnp
 	url = https://github.com/tree-sitter-grammars/tree-sitter-capnp.git
 	shallow = true
+[submodule "tree-sitter-roc"]
+	path = tree-sitter-roc
+	url = https://github.com/faldor20/tree-sitter-roc.git
+	shallow = true
