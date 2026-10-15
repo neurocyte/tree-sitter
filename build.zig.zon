@@ -96,6 +96,7 @@
         "tree-sitter-v",
         "tree-sitter-vim",
         "tree-sitter-vue",
+        "tree-sitter-wgsl",
         "tree-sitter-wikitext",
         "tree-sitter-xml",
         "tree-sitter-yaml",
