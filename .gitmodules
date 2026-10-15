@@ -436,3 +436,11 @@
 	path = tree-sitter-roc
 	url = https://github.com/faldor20/tree-sitter-roc.git
 	shallow = true
+[submodule "tree-sitter-godot-resource"]
+	path = tree-sitter-godot-resource
+	url = https://github.com/PrestonKnopp/tree-sitter-godot-resource.git
+	shallow = true
+[submodule "tree-sitter-gdshader"]
+	path = tree-sitter-gdshader
+	url = https://github.com/airblast-dev/tree-sitter-gdshader.git
+	shallow = true
