@@ -63,6 +63,7 @@
         "tree-sitter-mail",
         "tree-sitter-make",
         "tree-sitter-markdown",
+        "tree-sitter-mojo",
         "tree-sitter-nasm",
         "tree-sitter-nickel",
         "tree-sitter-nim",

@@ -420,3 +420,7 @@
 	path = tree-sitter-dot
 	url = https://github.com/rydesun/tree-sitter-dot.git
 	shallow = true
+[submodule "tree-sitter-mojo"]
+	path = tree-sitter-mojo
+	url = https://github.com/lsh/tree-sitter-mojo.git
+	shallow = true

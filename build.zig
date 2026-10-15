@@ -81,6 +81,7 @@ pub fn build(b: *std.Build) void {
         .{ "make", null },
         .{ "markdown", "tree-sitter-markdown" },
         .{ "markdown", "tree-sitter-markdown-inline" },
+        .{ "mojo", null },
         .{ "nasm", null },
         .{ "nickel", null },
         .{ "nim", null },
