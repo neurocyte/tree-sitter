@@ -13,6 +13,7 @@
         "scripts",
         "tree-sitter",
         "tree-sitter-agda",
+        "tree-sitter-asciidoc",
         "tree-sitter-asm",
         "tree-sitter-astro",
         "tree-sitter-awk",

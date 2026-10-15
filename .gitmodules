@@ -404,3 +404,7 @@
 	path = tree-sitter-svelte
 	url = https://github.com/tree-sitter-grammars/tree-sitter-svelte.git
 	shallow = true
+[submodule "tree-sitter-asciidoc"]
+	path = tree-sitter-asciidoc
+	url = https://github.com/cathaysia/tree-sitter-asciidoc.git
+	shallow = true

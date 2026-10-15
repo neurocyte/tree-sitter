@@ -28,6 +28,8 @@ pub fn build(b: *std.Build) void {
 
     const language_list = .{
         .{ "agda", null },
+        .{ "asciidoc", "tree-sitter-asciidoc" },
+        .{ "asciidoc", "tree-sitter-asciidoc_inline" },
         .{ "asm", null },
         .{ "astro", null },
         .{ "awk", null },
