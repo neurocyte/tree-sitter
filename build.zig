@@ -47,6 +47,7 @@ pub fn build(b: *std.Build) void {
         .{ "elixir", null },
         .{ "elm", null },
         .{ "fish", null },
+        .{ "fortran", null },
         .{ "fsharp", "fsharp" },
         .{ "fsharp", "fsharp_signature" },
         .{ "gdscript", null },

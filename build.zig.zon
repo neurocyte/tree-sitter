@@ -32,6 +32,7 @@
         "tree-sitter-elixir",
         "tree-sitter-elm",
         "tree-sitter-fish",
+        "tree-sitter-fortran",
         "tree-sitter-fsharp",
         "tree-sitter-gdscript",
         "tree-sitter-gitcommit",

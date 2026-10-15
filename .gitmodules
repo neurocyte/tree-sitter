@@ -396,3 +396,7 @@
 	path = tree-sitter-heex
 	url = https://github.com/phoenixframework/tree-sitter-heex
 	shallow = true
+[submodule "tree-sitter-fortran"]
+	path = tree-sitter-fortran
+	url = https://github.com/stadelmanma/tree-sitter-fortran.git
+	shallow = true
