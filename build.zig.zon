@@ -28,6 +28,7 @@
         "tree-sitter-c-sharp",
         "tree-sitter-css",
         "tree-sitter-d",
+        "tree-sitter-devicetree",
         "tree-sitter-diff",
         "tree-sitter-dockerfile",
         "tree-sitter-elixir",

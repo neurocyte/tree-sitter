@@ -45,6 +45,7 @@ pub fn build(b: *std.Build) void {
         .{ "css", null },
         .{ "diff", null },
         .{ "d", null },
+        .{ "devicetree", null },
         .{ "dockerfile", null },
         .{ "elixir", null },
         .{ "elm", null },

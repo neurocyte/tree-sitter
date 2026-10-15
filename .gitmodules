@@ -412,3 +412,7 @@
 	path = tree-sitter-pascal
 	url = https://github.com/Isopod/tree-sitter-pascal.git
 	shallow = true
+[submodule "tree-sitter-devicetree"]
+	path = tree-sitter-devicetree
+	url = https://github.com/joelspadin/tree-sitter-devicetree.git
+	shallow = true
