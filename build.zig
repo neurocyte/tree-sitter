@@ -104,6 +104,7 @@ pub fn build(b: *std.Build) void {
         .{ "php", "php" },
         .{ "po", null },
         .{ "powershell", null },
+        .{ "prolog", "tree-sitter-prolog" },
         .{ "proto", null },
         .{ "purescript", null },
         .{ "python", null },

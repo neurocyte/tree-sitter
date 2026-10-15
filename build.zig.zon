@@ -84,6 +84,7 @@
         "tree-sitter-php",
         "tree-sitter-po",
         "tree-sitter-powershell",
+        "tree-sitter-prolog",
         "tree-sitter-proto",
         "tree-sitter-purescript",
         "tree-sitter-python",

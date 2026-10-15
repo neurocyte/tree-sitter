@@ -444,3 +444,7 @@
 	path = tree-sitter-gdshader
 	url = https://github.com/airblast-dev/tree-sitter-gdshader.git
 	shallow = true
+[submodule "tree-sitter-prolog"]
+	path = tree-sitter-prolog
+	url = https://github.com/DataGrout/tree-sitter-grammars.git
+	shallow = true
