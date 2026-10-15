@@ -2,40 +2,29 @@
 set -e
 set -x
 
-pwd
-
-touch source.tar.gz
-
-# delete all links to avoid unpacking errors on windows
-find . -type l -delete
-
 cd "$(dirname "$0")/../.."
 
-tar -cvz \
-    --exclude-vcs \
-    --exclude-vcs-ignores \
-    --exclude=source.tar.gz \
-    --exclude=.github \
-    --exclude=docs \
-    --exclude=bindings \
-    --exclude=examples \
-    --exclude=test \
-    --exclude=script \
-    --exclude=scripts \
-    --exclude=corpus \
-    --exclude=tools \
-    --exclude=assets \
-    --exclude=tags \
-    --exclude=zig-cache \
-    --exclude=zig-out \
-    --exclude=tree-sitter/test \
-    --exclude=tree-sitter/cli \
-    --exclude=tree-sitter/highlight \
-    --exclude=tree-sitter-java/bindings \
-    --exclude=tree-sitter-java/script \
-    --exclude=tree-sitter-java/test \
-    --exclude=tree-sitter-rpmspec/queries/rpmspec \
-    --exclude=treez/build.zig \
-    --exclude=treez/build.zig.zon \
-    -f tree-sitter/source.tar.gz \
-    tree-sitter
+list=tree-sitter/source.files
+
+{
+    echo tree-sitter/LICENSE
+    echo tree-sitter/build.zig
+    echo tree-sitter/build.zig.zon
+    echo tree-sitter/treez/LICENSE
+    echo tree-sitter/treez/treez.zig
+    echo tree-sitter/tree-sitter/LICENSE
+    echo tree-sitter/tree-sitter/lib/LICENSE
+    find tree-sitter/tree-sitter/lib/include tree-sitter/tree-sitter/lib/src -type f
+    find tree-sitter \
+        \( -path tree-sitter/tree-sitter -o -name .git -o -name .zig-cache -o -name zig-out \
+           -o -name test -o -name bindings -o -name examples -o -name node_modules \) -prune -o \
+        -type f \( \
+            \( -path '*/src/*' \( -name '*.c' -o -name '*.cc' -o -name '*.h' \) \) -o \
+            \( -path '*/common/*' -name '*.h' \) -o \
+            -name '*.scm' -o \
+            -iname 'licen[cs]e*' -o -name 'COPYING*' -o -name '*.license' \
+        \) -print
+} | grep -v '^tree-sitter/tree-sitter-rpmspec/queries/rpmspec/' | sort -u > "$list"
+
+tar -czf tree-sitter/source.tar.gz -T "$list"
+rm "$list"
