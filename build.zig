@@ -108,6 +108,8 @@ pub fn build(b: *std.Build) void {
         .{ "sql", null },
         .{ "ssh-config", null },
         .{ "superhtml", "tree-sitter-superhtml" },
+        .{ "supermd", "tree-sitter/supermd" },
+        .{ "supermd", "tree-sitter/supermd-inline" },
         .{ "swift", null },
         .{ "systemverilog", null },
         .{ "toml", null },

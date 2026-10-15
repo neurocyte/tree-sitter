@@ -88,6 +88,7 @@
         "tree-sitter-sql",
         "tree-sitter-ssh-config",
         "tree-sitter-superhtml",
+        "tree-sitter-supermd",
         "tree-sitter-swift",
         "tree-sitter-systemverilog",
         "tree-sitter-toml",

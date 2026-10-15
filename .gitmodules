@@ -376,3 +376,7 @@
 	path = tree-sitter-bibtex
 	url = https://github.com/latex-lsp/tree-sitter-bibtex
 	shallow = true
+[submodule "tree-sitter-supermd"]
+	path = tree-sitter-supermd
+	url = https://github.com/kristoff-it/supermd.git
+	shallow = true
