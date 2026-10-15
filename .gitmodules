@@ -360,3 +360,7 @@
 [submodule "tree-sitter-ink"]
 	path = tree-sitter-ink
 	url = https://github.com/rhizoome/tree-sitter-ink2
+[submodule "tree-sitter-scss"]
+	path = tree-sitter-scss
+	url = https://github.com/serenadeai/tree-sitter-scss.git
+	shallow = true
