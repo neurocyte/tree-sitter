@@ -183,7 +183,11 @@ fn addParser(b: *std.Build, lib: *std.Build.Step.Compile, comptime lang: []const
             .name = basedir ++ "-scanner",
             .root_module = b.createModule(opts),
         });
-        obj.root_module.addCSourceFiles(.{ .files = &.{scanner}, .flags = &flags });
+        const scanner_flags = if (comptime std.mem.eql(u8, lang, "just"))
+            flags ++ [_][]const u8{"-UNDEBUG"}
+        else
+            flags;
+        obj.root_module.addCSourceFiles(.{ .files = &.{scanner}, .flags = &scanner_flags });
         obj.root_module.addIncludePath(b.path(srcdir));
         lib.root_module.addObject(obj);
     }
