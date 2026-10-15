@@ -364,3 +364,7 @@
 	path = tree-sitter-scss
 	url = https://github.com/serenadeai/tree-sitter-scss.git
 	shallow = true
+[submodule "tree-sitter-wgsl"]
+	path = tree-sitter-wgsl
+	url = https://github.com/szebniok/tree-sitter-wgsl.git
+	shallow = true
