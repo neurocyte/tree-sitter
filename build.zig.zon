@@ -72,6 +72,7 @@
         "tree-sitter-odin",
         "tree-sitter-openscad",
         "tree-sitter-org",
+        "tree-sitter-pascal",
         "tree-sitter-perl",
         "tree-sitter-php",
         "tree-sitter-po",

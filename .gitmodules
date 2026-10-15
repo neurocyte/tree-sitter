@@ -408,3 +408,7 @@
 	path = tree-sitter-asciidoc
 	url = https://github.com/cathaysia/tree-sitter-asciidoc.git
 	shallow = true
+[submodule "tree-sitter-pascal"]
+	path = tree-sitter-pascal
+	url = https://github.com/Isopod/tree-sitter-pascal.git
+	shallow = true
