@@ -31,6 +31,7 @@
         "tree-sitter-devicetree",
         "tree-sitter-diff",
         "tree-sitter-dockerfile",
+        "tree-sitter-dot",
         "tree-sitter-elixir",
         "tree-sitter-elm",
         "tree-sitter-fish",
