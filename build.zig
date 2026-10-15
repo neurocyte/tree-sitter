@@ -112,6 +112,7 @@ pub fn build(b: *std.Build) void {
         .{ "superhtml", "tree-sitter-superhtml" },
         .{ "supermd", "tree-sitter/supermd" },
         .{ "supermd", "tree-sitter/supermd-inline" },
+        .{ "svelte", null },
         .{ "swift", null },
         .{ "systemverilog", null },
         .{ "thrift", null },

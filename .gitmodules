@@ -400,3 +400,7 @@
 	path = tree-sitter-fortran
 	url = https://github.com/stadelmanma/tree-sitter-fortran.git
 	shallow = true
+[submodule "tree-sitter-svelte"]
+	path = tree-sitter-svelte
+	url = https://github.com/tree-sitter-grammars/tree-sitter-svelte.git
+	shallow = true

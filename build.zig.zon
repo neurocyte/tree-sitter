@@ -91,6 +91,7 @@
         "tree-sitter-ssh-config",
         "tree-sitter-superhtml",
         "tree-sitter-supermd",
+        "tree-sitter-svelte",
         "tree-sitter-swift",
         "tree-sitter-systemverilog",
         "tree-sitter-thrift",
