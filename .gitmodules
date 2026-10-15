@@ -424,3 +424,7 @@
 	path = tree-sitter-mojo
 	url = https://github.com/lsh/tree-sitter-mojo.git
 	shallow = true
+[submodule "tree-sitter-idris"]
+	path = tree-sitter-idris
+	url = https://github.com/kayhide/tree-sitter-idris.git
+	shallow = true

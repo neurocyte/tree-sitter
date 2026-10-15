@@ -65,6 +65,7 @@ pub fn build(b: *std.Build) void {
         .{ "heex", null },
         .{ "html", null },
         .{ "hurl", null },
+        .{ "idris", null },
         .{ "ink", null },
         .{ "java", null },
         .{ "javascript", null },

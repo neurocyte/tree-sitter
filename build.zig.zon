@@ -48,6 +48,7 @@
         "tree-sitter-heex",
         "tree-sitter-html",
         "tree-sitter-hurl",
+        "tree-sitter-idris",
         "tree-sitter-ink",
         "tree-sitter-java",
         "tree-sitter-javascript",
