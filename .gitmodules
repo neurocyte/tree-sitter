@@ -428,3 +428,7 @@
 	path = tree-sitter-idris
 	url = https://github.com/kayhide/tree-sitter-idris.git
 	shallow = true
+[submodule "tree-sitter-capnp"]
+	path = tree-sitter-capnp
+	url = https://github.com/tree-sitter-grammars/tree-sitter-capnp.git
+	shallow = true

@@ -21,6 +21,7 @@
         "tree-sitter-bibtex",
         "tree-sitter-c",
         "tree-sitter-c3",
+        "tree-sitter-capnp",
         "tree-sitter-cmake",
         "tree-sitter-comment",
         "tree-sitter-commonlisp",

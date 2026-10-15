@@ -38,6 +38,7 @@ pub fn build(b: *std.Build) void {
         .{ "cmake", null },
         .{ "c", null },
         .{ "c3", null},
+        .{ "capnp", null },
         .{ "comment", null },
         .{ "commonlisp", null },
         .{ "cpp", null },
