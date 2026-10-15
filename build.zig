@@ -102,6 +102,7 @@ pub fn build(b: *std.Build) void {
         .{ "rust", null },
         .{ "scala", null },
         .{ "scheme", null },
+        .{ "scss", null },
         .{ "sql", null },
         .{ "ssh-config", null },
         .{ "superhtml", "tree-sitter-superhtml" },
