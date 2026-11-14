@@ -173,8 +173,9 @@
 	shallow = true
 [submodule "tree-sitter-org"]
 	path = tree-sitter-org
-	url = https://github.com/milisims/tree-sitter-org.git
+	url = https://github.com/nvim-orgmode/tree-sitter-org.git
 	shallow = true
+	branch = next
 [submodule "tree-sitter-ziggy"]
 	path = tree-sitter-ziggy
 	url = https://github.com/kristoff-it/ziggy.git
